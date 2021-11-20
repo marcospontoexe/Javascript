@@ -22,13 +22,19 @@
 
 <body>
     <h1>E ai gente!</h1>        
-    <p>Parágrafo de teste</p>       
+    <p>Parágrafo de teste</p>
+          
     
 
     <script>    /*códigos em javascript para interação com o usuário*/
         window.alert('Minha primenira mensagem de alerta!') //mensagem de alerta
-        window.confirm('Deseja continuar estudando JavaScript?')    //mensagem de confirmação
-        window.prompt('Qual é o seu nome?')
+        var continuar = window.confirm('Deseja continuar estudando JavaScript?')    //mensagem de confirmação
+        var nome = window.prompt('Qual é o seu nome?')
+
+        typeof continuar;
+        typeof nome;
+
+
     </script>
 </body>
 </html>
