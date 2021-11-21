@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>                                         <!--título da janela-->
+
+    <style>     /*configurações de estilo (CSS) */
+        body
+        {
+            background-color: rgb(92, 92, 165); 
+            color: rgb(214, 197, 66);
+            font: normal 20pt Arial;
+        }  
+        h1
+        {
+            color: crimson;
+        }  
+    </style>
+</head>
+
+<body>
+    <h1>E ai gente!</h1>            <!-- Título no nível 1-->    
+    <p>Parágrafo de teste</p>       <!--Parágrafo-->
+          
+    
+
+    <script>    /*códigos em javascript para interação com o usuário*/
+        window.alert('Minha primenira mensagem de alerta!') //mensagem de alerta
+        var continuar = window.confirm('Deseja continuar estudando JavaScript?')    //mensagem de confirmação
+        var nome = window.prompt('Qual é o seu nome?')      
+        document.write('<h1>Seja bem vindo ' + nome + '!</h1><br/>')            //quando as variáveis são strings, o + concatena as strings
+        //método de concatenação atraves de `template string`
+        document.write(`A variável <strong>${nome}</strong> é uma ${typeof(nome)}!<br/>`)      //'typeof() retorna o tipo da variável'
+        document.write('nome contém ' + nome.length +' caracteres!<br/>')              //'string.length' retorna a quantidade de índices da string
+        document.write('nome: ' + nome.toUpperCase()+'<br/>')              //'string.toUpperCase()' retorna uma string em maiúsculo
+        document.write('nome: ' + nome.toLowerCase()+'<br/>')              //'string.toLowerCase()' retorna uma string em minúsculo
+        var n1 = Number(window.prompt('Digite um número: '))       //o prompt() sempre retorna string. 'Number()' retorna inteiro
+        var n2 = Number(window.prompt('Digite outro número: '))
+        var soma = n1 + n2
+        document.write('tipo da variável '+n1+': ' + typeof(n1)+'<br/>')
+        document.write('tipo da variável '+n2+': '  + typeof(n1)+'<br/>')
+        document.write(`a soma dos números ${n1} com ${n2} é  ${soma} <br/>`)           //método de concatenação atraves de `template string`
+        document.write('typeof(soma): '+typeof(soma)+'<br/>')
+        document.write('typeof(String(soma)): '+typeof(String(soma))+'<br/>')
+        var n3 = Number(window.prompt('Digite o salário: '))
+        document.write(`Número flutunate digitado (salário): ${n3}.<br/>`)
+        document.write(`salário: ${n3.toFixed(2)}<br/>`)                    //retorna um flutuante com duas casas decimais
+        document.write(`salário: ${n3.toFixed(2).replace('.',',')}<br/>`)    //'.replace()' substitui os pontos por vírgula
+        document.write(`representação em real: ${n3.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}<br/>`)      //converte para real
+        document.write(`representação em Dolar: ${n3.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'})}<br/>`)      //converte para dolar
+        document.write(`representação em Euro: ${n3.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'})}<br/>`)      //converte para dolar
+
+
+    </script>
+</body>
+</html>
