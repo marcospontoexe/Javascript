@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -31,7 +31,9 @@
         var continuar = window.confirm('Deseja continuar estudando JavaScript?')    //mensagem de confirmação
         var nome = window.prompt('Qual é o seu nome?')      
         document.write('<h1>Seja bem vindo ' + nome + '!</h1><br/>')            //quando as variáveis são strings, o + concatena as strings
+
         //método de concatenação atraves de `template string`
+        document.write(`<h1>COntinuar: ${continuar} <br/>`)
         document.write(`A variável <strong>${nome}</strong> é uma ${typeof(nome)}!<br/>`)      //'typeof() retorna o tipo da variável'
         document.write('nome contém ' + nome.length +' caracteres!<br/>')              //'string.length' retorna a quantidade de índices da string
         document.write('nome: ' + nome.toUpperCase()+'<br/>')              //'string.toUpperCase()' retorna uma string em maiúsculo
