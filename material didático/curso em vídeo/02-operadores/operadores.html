@@ -10,9 +10,13 @@
     <script>        //javascript (interatividade com o usuário)
         var n1 = Number(window.prompt('Digite um número: '))
         var n2 = Number(window.prompt('Digite outro número: '))
+        // Number.parseInt() converte para numero inteiro
+        // Number.parseFloat() converte para numero real
+        // Number() converte para numero inteiro ou real "automaticamente" 
+        // String(n) converte o n para string
         var soma = n1+n2
-        document.write(`n1: ${n1}<br/>`)
-        document.write(`n2: ${n2}<br/>`)
+        document.write('n1: ' + n1 + '<br/>')       // o operador + usado com string serve para concatenar strings
+        document.write(`n2: ${n2}<br/>`)        //usando templat string (`) para concatnar strings
         document.write(`Soma: ${soma}<br/>`)
         /* ----------------
         OPERADORES ARITMÉTICOS

@@ -50,6 +50,7 @@
         document.write(`Número flutunate digitado (salário): ${n3}.<br/>`)
         document.write(`salário: ${n3.toFixed(2)}<br/>`)                    //retorna um flutuante com duas casas decimais
         document.write(`salário: ${n3.toFixed(2).replace('.',',')}<br/>`)    //'.replace()' substitui os pontos por vírgula
+        // toLocaleString quer dizer string por localidade geografica
         document.write(`representação em real: ${n3.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}<br/>`)      //converte para real
         document.write(`representação em Dolar: ${n3.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'})}<br/>`)      //converte para dolar
         document.write(`representação em Euro: ${n3.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'})}<br/>`)      //converte para dolar
