@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1>Trabalhando com DOM</h1>
+    <p>Vamos aprender a usar o <strong>DOM</strong> em javaScript</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda quisquam iure atque autem, dolorum maiores modi nobis enim. Dolore, nesciunt. Reiciendis ipsa praesentium, odio sequi saepe excepturi aut nesciunt totam!
+    </p>
+    <a href="#" id="link">Clique aqui</a>
+    <br>
+    <div id="msg">
+        div de teste
+    </div>
+    <div class="msg">
+        div de teste
+    </div>
+    
+    <script>
+         document.write("----------------JavaScript---------------" + '<br/>')
+        document.write("Set de caracteres usado: ")
+        window.document.write(window.document.charset + '<br/>')
+        document.write("Nome do navegador atual: ")
+        window.document.write(window.navigator.appName + '<br/>')
+        document.write("URL atual: ")
+        window.document.write(window.document.URL + '<br/>')
+        /* MÉTODO DE ACESSO A ELEMENTOS
+        por marca   -> getElementsByTagName()
+        por id      -> getElementbByid()
+        por nome    -> getElementsbyName()
+        por classe  -> getElementsbyClassName()
+        por seletor -> querySelector() ou querySelectorAll() 
+        */
+       var p1 = window.document.getElementsByTagName('p')[0]        //recebe o conteudo do primeiro [0] parágrafo
+       p1.style.color = 'blue'                                      // altera a configuração de estilo (CSS) de p1
+       window.document.write('Primeiro parágrafo do "document" sem formatação: ' + p1.innerText + '<br/>')   //escreve o conteudo de p1 sem formatação
+       window.document.write('Primeiro parágrafo do "document" com formatação: ' + p1.innerHTML + '<br/>')   //escreve o conteudo de p1 sem formatação
+       var corpo = window.document.body                     
+       corpo.style.backgroundColor = 'grey'         //altera a configuração de estilo do body
+
+       var tst = window.document.getElementById('link')
+       tst.style.backgroundColor = 'green'
+
+       var p2 = window.document.querySelector('div#msg')
+       p2.style.backgroundColor = 'yellow'
+       var p2 = window.document.querySelector('div.msg')
+       p2.style.backgroundColor = 'red'
+
+    </script>
+</body>
+</html>
