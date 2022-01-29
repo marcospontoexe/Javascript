@@ -21,11 +21,11 @@
     </div>
     
     <script>
-         document.write("----------------JavaScript---------------" + '<br/>')
+        document.write("----------------JavaScript---------------" + '<br/>')
         document.write("Set de caracteres usado: ")
-        window.document.write(window.document.charset + '<br/>')
+        document.write(window.document.charset + '<br/>')
         document.write("Nome do navegador atual: ")
-        window.document.write(window.navigator.appName + '<br/>')
+        document.write(window.navigator.appName + '<br/>')
         document.write("URL atual: ")
         window.document.write(window.document.URL + '<br/>')
         /* MÉTODO DE ACESSO A ELEMENTOS
@@ -38,7 +38,7 @@
        var p1 = window.document.getElementsByTagName('p')[0]        //recebe o conteudo do primeiro [0] parágrafo
        p1.style.color = 'blue'                                      // altera a configuração de estilo (CSS) de p1
        window.document.write('Primeiro parágrafo do "document" sem formatação: ' + p1.innerText + '<br/>')   //escreve o conteudo de p1 sem formatação
-       window.document.write('Primeiro parágrafo do "document" com formatação: ' + p1.innerHTML + '<br/>')   //escreve o conteudo de p1 sem formatação
+       window.document.write('Primeiro parágrafo do "document" com formatação: ' + p1.innerHTML + '<br/>')   //escreve o conteudo de p1 com formatação
        var corpo = window.document.body                     
        corpo.style.backgroundColor = 'grey'         //altera a configuração de estilo do body
 

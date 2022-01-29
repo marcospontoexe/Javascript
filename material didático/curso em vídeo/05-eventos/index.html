@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventos na DOM</title>
+    <style>
+        div#area{
+            font-size: 2em;
+            background-color: aqua;
+            color: brown;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;                      /* deixa a margem da palavra com 200px */
+            border: 5px solid rgb(5, 59, 59);
+            border-radius: 5px;
+        }
+
+        div#tst{
+            font-size: 2em;
+            background-color: aqua;
+            color: brown;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;                      /* deixa a margem da palavra com 200px */
+            border: 5px solid rgb(5, 59, 59);
+            border-radius: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrou()" onmouseout="saiu()">      <!-- o evento 'onclick' vai chamar a função clicar -->
+        INTERAJA...
+    </div>
+    <!-- POSÍVEIS EVENTOS DO MOUSE DENTRO DA DIV
+    MOUSEENTER  -> quando o mouse entra na div
+    MOUSEMOVE   ->  quando o mouse se move dentro da div
+    MOUSEDOWN   ->  quando o botão do mouse é apertado e se mantem apertado
+    MOUSEUP     ->  quando o botão do mouse é solto
+    CLICK       -> quando o botão do mouse é apertado e solto no mesmo instante
+    MOUSEOUT    -> quando o mouse sai da div
+    -->
+    <div id="tst">
+        INTERAJA_2...
+    </div>
+
+    <script>
+        // MÉTODO COM EVENTOS NO HTML
+        var a = window.document.getElementById('area')
+        function clicar(){      // função clicar            
+            a.innerText = 'CLICOU!'
+            a.style.backgroundColor = 'red'
+            a.style.color = 'white'
+        }
+        function entrou(){
+            a.innerText = 'ENTROU!'
+        }
+        function saiu(){
+            a.innerText = 'SAIU!'
+            a.style.backgroundColor = 'aqua'
+            a.style.color = 'brown'
+
+        }
+
+        // MÉTODO COM EVENTO APENAS NO JAVASCRIPT
+        var b = window.document.getElementById('tst')
+        b.addEventListener('click', clicar1) 
+        b.addEventListener('mouseenter', entrou1) 
+        b.addEventListener('mouseout', saiu1) 
+        function clicar1(){      // função clicar            
+            b.innerText = 'CLICOU!'
+            b.style.backgroundColor = 'red'
+            b.style.color = 'white'
+        }
+        function entrou1(){
+            b.innerText = 'ENTROU!'
+        }
+        function saiu1(){
+            b.innerText = 'SAIU!'
+            b.style.backgroundColor = 'aqua'
+            b.style.color = 'brown'
+        }
+
+    </script>
+    
+</body>
+</html>
