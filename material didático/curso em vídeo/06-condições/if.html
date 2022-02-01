@@ -16,11 +16,17 @@
             var idade = Number(window.document.getElementById('idade').value)   //idade recebe valor do 'input:numeber' em forma de numero
             var maioridade = window.document.getElementById('maioridade')
             maioridade.innerHTML = `Você tem ${idade},`
-            if(idade < 18){
-                maioridade.innerHTML += ` portanto é <strong>menor</strong> de idade!`  //concatena com a string antiga
+            if(idade < 12){
+                maioridade.innerHTML += ` portanto é <strong>criança</strong>!`  //concatena com a string antiga
+            }
+            else if(idade < 18){
+                maioridade.innerHTML += ` portanto é <strong>adolescente</strong>!`  //concatena com a string antiga
+            }
+            else if(idade < 65){
+                maioridade.innerHTML += ` portanto é <strong>adulto</strong>!`  //concatena com a string antiga
             }
             else{
-                maioridade.innerHTML += ` portanto é <strong>maior</strong> de idade!`  //concatena com a string antiga
+                maioridade.innerHTML += ` portanto é <strong>idoso</strong>!`  //concatena com a string antiga
             }
         }
     </script>
