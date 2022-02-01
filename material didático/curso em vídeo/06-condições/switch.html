@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando a acondição switch</title>
+</head>
+<body>
+    <input type="button" value="verificar o dia da semana!" onclick="semana()">
+    <p id="semana">Dia da semana:</p>
+    
+    <script>
+        function semana(){
+            var agora = new Date()
+            var diaSemana = agora.getDay()  // recebe o dia da semana (0=dom, 1=seg, 2=ter...)
+            var sem = window.document.getElementById('semana')
+            switch(diaSemana){
+                case 0:
+                    sem.innerHTML = 'Hoje é <strong>domingo</strong>'
+                    break
+                case 1:
+                    sem.innerHTML = 'Hoje é <strong>segunda</strong>'
+                    break 
+                case 2:
+                    sem.innerHTML = 'Hoje é <strong>terça</strong>'
+                    break
+                case 3:
+                    sem.innerHTML = 'Hoje é <strong>quarta</strong>'
+                    break
+                case 4:
+                    sem.innerHTML = 'Hoje é <strong>quinta</strong>'
+                    break
+                case 5:
+                    sem.innerHTML = 'Hoje é <strong>sexta</strong>'
+                    break   
+                case 6:
+                    sem.innerHTML = 'Hoje é <strong>sábado</strong>'
+                    break 
+                default:
+                    sem.innerHTML = 'não foi possível processar que dia é hoje!'  
+                    break           
+
+            }
+        }
+    </script>
+</body>
+</html>
