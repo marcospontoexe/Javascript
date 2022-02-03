@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+*{      /* significa todos elementos (h1, h2, h3...h8, p, main, footer...) */
+    margin: 0px;        /* elimina a margem de todos os elementos*/
+    padding: 0px;       /* elimina o pad de todos os elementos*/
+}
+body{
+    background-color: white;
+    font: normal 15pt Arial;
+}
+
+header h1{
+    color: white;
+    text-align: center;
+    padding: 30px 0px 30px 0px;
+}
+
+section{
+    position: relative;         /* por padrão todo posicionamento de uma box é relativo*/
+    background-color: white;
+    min-width: 300px;
+    max-width: 800px;
+    height: 60vh;
+    margin: auto;       /* configura automaticamente a box main para ficar centralizada na tela*/
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.342);
+
+}
+
+h2#hora{
+    text-align: center;
+    font-size: 5vh;
+}
+
+div#imagem{
+    position: absolute;     /* posicionamneto absoluto*/
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 40vh;                   /* usar porcentagem da Viewport tras recursividade*/
+    width: 40vh;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center center;      /*posicionamento da coluna x linha*/
+
+    
+    /* para alterar a âncora (por padrão é no canto esquerdo superior), reposicionar 50% para a esquerda e 50% para baixo, desse maneira a âncora fica centralizada no centro da box*/
+    transform: translate(-50%, 0%);
+    
+    top: 20%;             /* distância da âncora do conteudo em relação à margem superior do container*/
+    left: 50%;              /* distância da âncora do conteudo em relação à margem esquerda do container*/  
+
+  
+}
+
+footer p{
+    text-align: center;
+    padding-top: 10px;
+    color: white;
+}
