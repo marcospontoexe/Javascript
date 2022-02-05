@@ -14,10 +14,20 @@
     </header>
 
     <section>
-        <div id="idade">
-            <p>Ano de Nascimento: <input type="number" name="anoNasc" id="anoNasc"></p>
-            <p>Sexo:  <input type="checkbox" name="masculino" id="masculino"> Masculino   <input type="checkbox" name="feminino" id="feminino"> Feminino</p>
-            <input type="button" value="Verificar">
+        <div>
+            <p>Ano de Nascimento: 
+                <input type="number" name="anoNasc" id="anoNasc" min="0">
+            </p>
+            <p>Sexo:  
+                <input type="radio" name="radSex" id="masculino" checked>   <!-- input do tipo radio button (quando tem o mesmo 'name', permite a marcação em apenas um radio button)-->
+                <label for="masc">Masculino</label>
+                <input type="radio" name="radSex" id="feminino">
+                <label for="fem">Feminino</label>
+                
+            </p>
+            <p>
+                <input type="button" value="Verificar" onclick="verificar()">
+            </p>
         </div>
         <div id="imagem">Preencha os dados acima para ver o resultado!</div>
     </section>
