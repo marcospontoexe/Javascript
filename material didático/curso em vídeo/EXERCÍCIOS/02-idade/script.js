@@ -17,7 +17,32 @@ function verificar(){
         else if(sexo[1].checked){        // caso o 2° checkbox (feminino) esteja selecionado
             var genero = 'mulher'
         }
-        img.innerHTML = genero
+        
+        
+
+        switch(idade){
+            case idade < 3:
+                img.innerHTML = `Detectamos ${genero} de ${idade} anos!`
+                break
+            case idade < 7: 
+                
+                break
+            case idade < 12:
+                
+                break
+            case idade < 18:
+
+                break
+            case idade < 40:
+
+                break
+            case idade < 60:
+
+                break
+            default:
+                
+                break
+        }
     }
 
     
