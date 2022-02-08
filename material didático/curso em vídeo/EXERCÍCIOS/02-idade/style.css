@@ -16,7 +16,6 @@ header h1{
 }
 
 section{
-    position: relative;         /* por padrão todo posicionamento de uma box é relativo*/
     background-color: white;
     min-width: 300px;
     max-width: 800px;
@@ -33,18 +32,13 @@ div#idade{
     font-size: 5vh;
 }
 
-div#imagem{
-    position: absolute;     /* posicionamneto absoluto*/
+div#msg{
+
     border: 1px solid black;
     border-radius: 10px;
-   
-    
-
-    
- 
-
-  
+     
 }
+
 
 footer p{
     text-align: center;
