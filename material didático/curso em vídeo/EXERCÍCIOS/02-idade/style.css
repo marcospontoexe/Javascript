@@ -19,7 +19,7 @@ section{
     background-color: white;
     min-width: 300px;
     max-width: 800px;
-    height: 60vh;
+    height: 70vh;
     margin: auto;       /* configura automaticamente a box main para ficar centralizada na tela*/
     border: 1px solid black;
     border-radius: 5px;
@@ -33,12 +33,24 @@ div#idade{
 }
 
 div#msg{
-
-    border: 1px solid black;
+    position: relative;         /* por padrão todo posicionamento de uma box é relativo*/
     border-radius: 10px;
+    padding-top: 10px;
+
      
 }
 
+img{
+    position: absolute;     /* posicionamneto absoluto*/
+    height: 40vh;                   /* usar porcentagem da Viewport tras recursividade*/
+    width: 40vh;
+
+    /* para alterar a âncora (por padrão é no canto esquerdo superior), reposicionar 50% para a esquerda e 50% para baixo, desse maneira a âncora fica centralizada no centro da box*/
+    transform: translate(-50%, 30%);
+            
+    top: 0%;             /* distância da âncora do conteudo em relação à margem superior do container*/
+    left: 50%;              /* distância da âncora do conteudo em relação à margem esquerda do container*/  
+}
 
 footer p{
     text-align: center;
