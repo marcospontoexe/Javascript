@@ -1,38 +1,27 @@
-function contador(){
+function tabuada(){
     /* A variável 'let' é destruida no momento em que a função 'contador()' é finalizado */
-    let inicio = window.document.getElementById('txtinicio')
-    var fim = window.document.getElementById('txtfim')
-    var contador = window.document.getElementById('txtpasso')
-    var msg = window.document.getElementById('resposta')
+    let numero = window.document.getElementById('txtnum')
+    let tabuada = window.document.getElementById('tabuada')
+    let msg = window.document.getElementById('lista')
 
-    if(fim.value.length == 0 || contador.value.length == 0){   
+    tabuada.innerHTML = ''                  // limpa o select
+    if(numero.value.length == 0 || numero.value == 0){   
         window.alert('[ERRO] Dados incorretos!')
-        msg.innerHTML = 'Impossível contar!'
+        
+        msg.text = `Impossível calcular!`          // adiciona uma string dentro da 'option' criada (recisa ser com crase)
+        msg.value = `tab0`                            //cria um 'value' (usado em php) para cada 'option' de maneira dinâmica
+        tabuada.appendChild(msg)                       // mostra a string dentro da option
     } 
     else{
-        msg.innerHTML = 'Contando: <br>'
+        let num = Number(numero.value)
         
-        if(contador.value <= 0){
-            window.alert('[PASO INVÁLIDO] Considerando passo = 1!')
-            contador.value = 1
-
+        for(var c = 0; c <=10; c++){
+            let item = document.createElement('option')     // cria um elmento 'option' dentro do 'selecte' de maneira dinâmica
+            item.text = `${num} X ${c} = ${num*c}`          // adiciona uma string dentro da 'option' criada (recisa ser com crase)
+            item.value = `tab${c+1}`                            //cria um 'value' (usado em php) para cada 'option' de maneira dinâmica
+            tabuada.appendChild(item)                       // mostra a string dentro da option    
         }
-        if(Number(fim.value) > Number(inicio.value)){       // contagem crescente
-            for(var c = Number(inicio.value); c <= Number(fim.value); c+=Number(contador.value)){
-                msg.innerHTML += `\u{1F449} ${c} `        // U+1F601 é a formatação original, para para html
-            }
-        }
-        else{                                           //contagem regressiva
-            for(var c = Number(inicio.value); c <= Number(fim.value); c-=Number(contador.value)){
-                msg.innerHTML += `\u{1F449} ${c} `        // U+1F601 é a formatação original, para para html
-            }
-        }
-
-        msg.innerHTML += `<br>\u{1F3c1}`         // o camando '\u{}' só funciona quando usado entre crases
+  
     } 
-
-    
-    
-
-
+ 
 }

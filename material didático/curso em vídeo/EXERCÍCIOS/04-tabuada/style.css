@@ -17,7 +17,6 @@ header h1{
 }
 
 section{  
- 
     background-color: white;
     min-width: 300px;
     max-width: 500px;
@@ -36,11 +35,16 @@ section p{
     margin-bottom: 10px;
 }
  
-p#resposta{
+select{
     text-align:  center;
+    /*font-size: 3vh; */
 }
 
 input{
+    font-size: 3vh;
+}
+
+input#txtnum{
     width: 50px;
 }
 
