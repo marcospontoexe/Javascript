@@ -28,7 +28,8 @@
 
     <script>    /*códigos em javascript para interação com o usuário*/
         window.alert('Minha primenira mensagem de alerta!') //mensagem de alerta
-        var continuar = window.confirm('Deseja continuar estudando JavaScript?')    //mensagem de confirmação
+        /* A variável 'let' é destruida no momento em que o bloco onde ela está localizada é finalizado (por exemplo uma função)*/
+        let continuar = window.confirm('Deseja continuar estudando JavaScript?')    //mensagem de confirmação
         var nome = window.prompt('Qual é o seu nome?')      
         document.write('<h1>Seja bem vindo ' + nome + '!</h1><br/>')            //quando as variáveis são strings, o + concatena as strings
 
