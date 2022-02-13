@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <h1>Trabalhando com arrays</h1>
+    
+    <script>
+        var numeros = [5, 9, 8]
+        document.write(`valores do array: ${numeros}. <br>`)
+        numeros[3] = 10                 // cria um novo índice (3) com o valor 10 
+        numeros.push(5)                 // cria um novo índice (4) com o valor 5 
+        document.write(`valores do array após novo valor adicionado: ${numeros}. <br>`)
+        document.write(`tamanho do array: ${numeros.length}. <br>`)
+        document.write(`array em ordem crescente: ${numeros.sort()}. <br>`)
+
+        for(var i = 0; i< numeros.length; i++){
+            document.write(`${numeros[i]} <br>`)
+        }
+
+        for(let c in numeros){
+            document.write(`${c} |`)
+        }
+        document.write('<br>')
+        for(let c in numeros){
+            document.write(`${numeros[c]} |`)
+        }
+        document.write('<br>')
+
+        document.write(`Índice do valor 8: ${numeros.indexOf(8)}. <br>`)
+        document.write(`Índice do valor 100: ${numeros.indexOf(100)}. <br>`)
+
+    </script>
+</body>
+</html>
