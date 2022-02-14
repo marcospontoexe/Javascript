@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+    <style>
+        section{
+            border-radius: 5px;
+            border: 1px solid black;
+            margin: 5px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Trabalhando com funções</h1>
+    <section>
+        <h2>Somando dois números</h2>
+        <p>n1: <input type="number" name="n1" id="txtn1"></p>
+        <p>n2: <input type="number" name="n2" id="txtn2"></p>
+        <p><input type="button" value="SOMAR" onclick="calcular()"></p>
+        <p id="res">Digite dois números para somar!</p>
+    </section>
+
+    <section>
+        <h2>Múltiplo de dois</h2>
+        <p>Número: <input type="number" name="multiplo" id="txtMultiplo"></p>
+        <p><input type="button" value="Calcular" onclick="multiplicar()"></p>
+        <p id="resMultip">Digite um número para ser multiplicado pro dois</p>
+    </section>
+
+
+    <script>
+        function calcular(){
+            let msg = window.document.getElementById('res') 
+            var n1 = Number(window.document.getElementById('txtn1').value)
+            var n2 = Number(window.document.getElementById('txtn2').value) 
+
+            function somar(n1=0, n2=0){    // caso os parâmetros não recebam nenhum valor, valem zero (parÂmetros pre-definidos)                     
+               return n1+n2
+            }
+            let result = somar()
+            msg.innerHTML = `A soma entre ${n1} e ${n2} é igual a ${result}`
+        }
+
+        function multiplicar(){
+            let msg = window.document.getElementById('resMultip') 
+            var n1 = Number(window.document.getElementById('txtMultiplo').value)
+
+            function calcular(n){
+                return n*2
+            }
+
+            let multi = calcular()
+            msg.innerHTML = `O múltiplo de ${n} é ${multi(5)}`
+
+        }
+        
+        
+
+    </script>
+</body>
+</html>
