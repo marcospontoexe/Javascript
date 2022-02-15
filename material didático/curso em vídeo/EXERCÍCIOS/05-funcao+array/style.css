@@ -20,7 +20,7 @@ section{
     background-color: white;
     min-width: 300px;
     max-width: 500px;
-    height: 50vh; 
+    height: 70vh; 
     margin: auto;       /* configura automaticamente a box main para ficar centralizada na tela*/
     border: 1px solid black;
     border-radius: 5px;
@@ -30,9 +30,6 @@ section{
     font-size: 3vh;
 }
 
-select{
-    width: 300px;
-}
 
 section p{
     margin-bottom: 10px;
@@ -40,7 +37,7 @@ section p{
  
 select{
     text-align:  center;
-    /*font-size: 3vh; */
+    width: 300px;
 }
 
 input{
