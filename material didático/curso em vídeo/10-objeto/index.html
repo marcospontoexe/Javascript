@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com objetos</title>
+</head>
+<body>
+    <h1>Usando Objeto</h1>
+    <!-- var objeto = {nome do índice: valor da string, nome do índice: valor da string, nome do índice: valor da string}-->
+    <section>
+        <p>Nome: <input type="text" name="nome" id="txtnome"></p>
+        <p>Idade: <input type="number" name="idade" id="txtidade"></p>
+        <p>Peso: <input type="number" name="Peso" id="txtpeso"></p>
+        <p>Engordou quantos quilos: <input type="number" name="engordou" id="txtengordou"></p>
+        <p><input type="button" value="Incluir usuário." onclick="incluir()"></p>
+        <p id="msg"></p>
+
+        <script>
+
+            let cliente = {nome:'Marcos', 
+            idade:31, 
+            peso:69, 
+            engordar(p=0){
+                this.peso += p
+            }}
+
+            let nm = window.document.getElementById('txtnome')
+            let id = window.document.getElementById('txtidade')
+            let ps = window.document.getElementById('txtpeso')
+            let engord = window.document.getElementById('txtengordou')
+            let msg = window.document.getElementById('msg')
+           
+            function incluir(){
+                msg.innerHTML = ''
+                cliente.nome = String(nm.value)  //adiciona um valor ao índice 'nome' do objeto cliente
+                cliente.idade = Number(id.value)
+                cliente.peso = Number(ps.value)
+                msg.innerHTML += `Nome: ${cliente.nome}. <br>`
+                msg.innerHTML += `Idade: ${cliente.idade}. <br>`
+                msg.innerHTML += `Peso: ${cliente.peso}. <br>`
+                cliente.engordar(Number(engord.value))
+                msg.innerHTML += `Engordou ${Number(engord.value)} quilos: ${cliente.peso}. <br>`
+            }
+
+        </script>
+    </section>
+
+</body>
+</html>
