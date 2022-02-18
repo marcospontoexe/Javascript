@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu com listas</title>
+    <style>
+        section{
+            border: 1px solid black;
+            border-radius: 3px;
+            padding: 10px;
+            width: 800px;
+        }
+        ol.subMenu{
+            padding-left: 15px;
+            width: 96%;
+            display: none;
+            
+        }
+        ol#menu{
+            padding-left: 0px;
+            width: 50%;
+        }
+        li{
+            list-style: none;           /* apaga os marcadores*/
+           
+        }
+        ol#menu>li{
+            margin-bottom: 5px;
+
+        }
+
+        ol#menu>li>a{           /* configura apenas os links contidos dentro das listas pertencentes ao ol#menu*/
+            display: block;        /* a tag 'a' é do tipo inline-block, ao mudar para block-level a tag 'a' vai ocupar a
+largura total do elemento onde ele está contido, permitindo selecionar o opção mesmo com o mouse fora da palavra*/
+            text-decoration: none;      /* tira o sublinhado*/
+            background-color: rgb(52, 52, 255);
+            color: aliceblue;
+            padding: 10px 5px;
+            margin: 0px;
+            border-radius: 5px;
+        }
+
+        ol.subMenu>li>a{           /* configura apenas os links contidos dentro das listas pertencentes ao ol#menu*/
+            display: block;        /* a tag 'a' é do tipo inline-block, ao mudar para block-level a tag 'a' vai ocupar a
+largura total do elemento onde ele está contido, permitindo selecionar o opção mesmo com o mouse fora da palavra*/
+            text-decoration: none;      /* tira o sublinhado*/
+            background-color: rgb(52, 52, 255);
+            color: aliceblue;
+            padding: 10px 5px;
+            margin: 1px 0px;
+            border-radius: 5px;
+           
+        }
+
+        ol#menu>li>a:hover, ol.subMenu>li>a:hover{
+            background-color: rgb(101, 101, 255);
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Menu 1</h1>        
+            <ol id="menu">               
+                <li class="item" onclick="expandir1()"><a href="#">OPÇÃO I</a>
+                    <ol id="subMenu1" class="subMenu" onmouseout="saiu()">
+                        <li><a href="#">Sub-Menu A</a>
+                        <li><a href="#">Sub-Menu B</a>
+                        <li><a href="#">Sub-Menu C</a>
+                    </ol>            
+                <li class="item" onclick="expandir2()"><a href="#">OPÇÃO II</a>
+                    <ol id="subMenu2" class="subMenu">
+                        <li><a href="#">Sub-Menu A</a>
+                        <li><a href="#">Sub-Menu B</a>
+                        <li><a href="#">Sub-Menu C</a>
+                    </ol>  
+                <li class="item" onclick="expandir3()"><a href="#">OPÇÃO III</a>
+                    <ol id="subMenu3" class="subMenu">
+                        <li><a href="#">Sub-Menu A</a>
+                        <li><a href="#">Sub-Menu B</a>
+                        <li><a href="#">Sub-Menu C</a>
+                    </ol>
+                <li class="item" onclick="expandir4()"><a href="#">OPÇÃO IV</a>
+                    <ol id="subMenu4" class="subMenu">
+                        <li><a href="#">Sub-Menu A</a>
+                        <li><a href="#">Sub-Menu B</a>
+                        <li><a href="#">Sub-Menu C</a>
+                    </ol>           
+            </ol>   
+    </section>
+
+    <script>
+        function expandir1(){
+            window.document.getElementById('subMenu1').style.display = 'inline-block'
+            
+        }
+        function expandir2(){
+            window.document.getElementById('subMenu2').style.display = 'inline-block'
+        }
+        function expandir3(){
+            window.document.getElementById('subMenu3').style.display = 'inline-block'
+            
+        }
+        function expandir4(){
+            window.document.getElementById('subMenu4').style.display = 'inline-block'
+        }
+
+        function saiu(){
+            window.document.getElementById('subMenu1').style.display = 'none'
+            
+        }
+
+    </script>
+    
+</body>
+</html>
