@@ -13,8 +13,12 @@
         var numeros = [5, 9, 8]
         document.write(`valores do array: ${numeros}. <br>`)
         numeros[3] = 10                 // cria um novo índice (3) com o valor 10 
-        numeros.push(5)                 // cria um novo índice (4) com o valor 5 
+        numeros.push(5)                 // cria um novo índice (4) com o valor 5 (adiciona no final)
+        numeros.unshift(100)            // adiciona no inicio da array
         document.write(`valores do array após novo valor adicionado: ${numeros}. <br>`)
+        numeros.pop();              // apaga o ultimo elemento
+        numeros.shift();            //apaga o primeiro elemento
+        document.write(`valores do array após excluir o 1° e ultimo elemento: ${numeros}. <br>`)
         document.write(`tamanho do array: ${numeros.length}. <br>`)
         document.write(`array em ordem crescente: ${numeros.sort()}. <br>`)
 
@@ -32,7 +36,7 @@
         document.write('<br>')
 
         document.write(`Índice do valor 8: ${numeros.indexOf(8)}. <br>`)
-        document.write(`Índice do valor 100: ${numeros.indexOf(100)}. <br>`)
+        document.write(`Índice do valor 99: ${numeros.indexOf(99)}. <br>`)
 
     </script>
 </body>
