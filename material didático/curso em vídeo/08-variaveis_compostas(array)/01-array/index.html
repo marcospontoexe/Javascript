@@ -10,6 +10,10 @@
     <h1>Trabalhando com arrays</h1>
     
     <script>
+        function ordena(a, b){      // função para auxiliar a ordenar numeros com o metodo sort()
+            return a-b;
+        }
+
         var numeros = [5, 9, 8]
         document.write(`valores do array: ${numeros}. <br>`)
         numeros[3] = 10                 // cria um novo índice (3) com o valor 10 
@@ -20,7 +24,8 @@
         numeros.shift();            //apaga o primeiro elemento
         document.write(`valores do array após excluir o 1° e ultimo elemento: ${numeros}. <br>`)
         document.write(`tamanho do array: ${numeros.length}. <br>`)
-        document.write(`array em ordem crescente: ${numeros.sort()}. <br>`)
+        document.write(`array em ordem crescente sem função: ${numeros.sort()}. <br>`)     // ordena apenas string
+        document.write(`array em ordem crescente com a função: ${numeros.sort(ordena)}. <br>`)     // ordena apenas string
 
         for(var i = 0; i< numeros.length; i++){
             document.write(`${numeros[i]} <br>`)
