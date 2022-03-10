@@ -1,0 +1,42 @@
+ <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblitoteca Math</title>                                         <!--título da janela-->
+
+    <style>     /*configurações de estilo (CSS) */
+        body
+        {
+            background-color: rgb(92, 92, 165); 
+            color: white;
+            font: normal 20pt Arial;
+        }  
+        
+    </style>
+</head>
+
+<body>
+    
+    
+<br>
+    <script>    /*códigos em javascript para interação com o usuário*/
+        var x =2
+        var y = 55
+        var z = 88
+        document.write(`x: ${x}, <br>y: ${y}<br> z:${z} <br>`)    
+        document.write(`O maior número: ${Math.max(x, y, z)} <br>`)     // não funciona com string (pois é um objeto)
+        document.write(`O menor número: ${Math.min(x, y, z)} <br>`)  
+        document.write(`Número flutuante sorteado (entr 0 e 0,9999): ${Math.random()} <br>`) 
+        document.write(`Número flutuante sorteado (entr 1 e 9,9999): ${Math.random()*10} <br>`) 
+        document.write(`Número flutuante sorteado (entr 1 e 10): ${Math.ceil(Math.random()*10)} <br>`)       //o Math.Ceil() arredonda o valor
+        document.write(`Número flutuante sorteado (entr 1 e 50): ${Math.ceil(Math.random()*50)} <br>`)
+        
+
+        
+
+
+    </script>
+</body>
+</html>
