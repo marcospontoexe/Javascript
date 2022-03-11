@@ -14,6 +14,15 @@
         document.write('--------------------------------------------------' + "<br>")
         document.write(`conteúdo do índice zero: <br> ${temp.charAt(0)} <br>`)
         document.write('--------------------------------------------------' + "<br>")
+        document.write(`Primeira palavra: <br>`)
+        var palavra = ""
+        var cont = 0
+        do{
+            palavra += temp.charAt(cont)
+            cont ++
+        }while(temp.charAt(cont) != " ")
+        document.write(palavra)
+        document.write('--------------------------------------------------' + "<br>")
     </script>
     
 </body>
