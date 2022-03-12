@@ -28,6 +28,13 @@
         document.write(`Preço: ${prod.preco} <br>`)
         document.write(`Item: ${item.cor} <br>`)
 
+        //CRIANDO UM MÉTODO 
+        function informacoes(){
+            return `A ${this.nome} da cor ${this.cor} custa ${this.preco} reais. <br>`
+        }
+        item.descricao = informacoes  // atribuindo o método 'informacoes' ao objeto
+        document.write(item.descricao())
+
     </script>
     
 </body>
