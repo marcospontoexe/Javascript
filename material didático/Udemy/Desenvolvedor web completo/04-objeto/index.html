@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com objetos</title>
+</head>
+<body>
+    <h1>Trabalhando com objetos</h1>
+
+    <script>
+        var produto  = new Object()     // declaração de um objeto camado 'temp'
+        produto.nome = 'Caneta'         // declarando um atributo para o objeto
+        produto.preco = 1.99
+        produto.cor = 'Azul'
+      
+
+        // OUTRO MÉTODO DE DECLARAÇÃO
+        var prod = {}        // declaração de um objeto camado 'prod'
+        prod.nome = 'Caneta'         // declarando um atributo para o objeto
+        prod.preco = 1.99
+        prod.cor = 'Preta'
+
+        // OUTRO MÉTODO DE DECLARAÇÃO
+        var item = {nome:'Caneta', preco:2.99, cor:'Colorida'}
+        document.write(`Item: ${produto.nome} <br>`)
+        document.write(`Preço: ${prod.preco} <br>`)
+        document.write(`Item: ${item.cor} <br>`)
+
+    </script>
+    
+</body>
+</html>
