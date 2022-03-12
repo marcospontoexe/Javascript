@@ -19,7 +19,10 @@
         var semana = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
         document.write(`Dia da semana: ${semana[agora.getDay()]} <br>`)   //getDay()retorna um valor entre 0 (domingo) e 6 (sábado)
         var nascimento = new Date(1990,10,05)           // mês deve ser entre 0 e 11
-        document.write(`Dia da semana do meu nascimento (nascimento 05/11/1990): ${semana[nascimento.getDay()]}`)
+        document.write(`Dia da semana do meu nascimento (nascimento 05/11/1990): ${semana[nascimento.getDay()]} <br>`)
+        document.write(`Hora atual: ${agora.getHours()} <br>`)       // entre 0 e 24
+        document.write(`Minuto atual: ${agora.getMinutes()} <br>`) 
+        document.write(`Segundo atual: ${agora.getSeconds()} <br>`) 
     </script>
     
 </body>
