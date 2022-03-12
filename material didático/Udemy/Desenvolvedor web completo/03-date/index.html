@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando o objeto Date</title>
+</head>
+<body>
+    <h1>Trabalhando com o objeto Date!</h1>
+    <hr>        <!--linha horizontal-->
+
+    <script>
+        var agora = new Date()
+        document.write(`Ano atual: ${agora.getFullYear()} <br>`)
+        var mes = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'dezembro']
+        document.write(`mês atual: ${mes[agora.getMonth()]} <br>`)       // getMonth() retorna um valor entre 0 e 11
+        document.write(`dia atual: ${agora.getDate()} <br>`)            // retorna um valor entre 1 e 31
+        var semana = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
+        document.write(`Dia da semana: ${semana[agora.getDay()]} <br>`)   //getDay()retorna um valor entre 0 (domingo) e 6 (sábado)
+        var nascimento = new Date(1990,10,05)           // mês deve ser entre 0 e 11
+        document.write(`Dia da semana do meu nascimento (nascimento 05/11/1990): ${semana[nascimento.getDay()]}`)
+    </script>
+    
+</body>
+</html>
