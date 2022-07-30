@@ -6,22 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu com listas</title>
     <style>
+
         section{
             border: 1px solid black;
             border-radius: 3px;
             padding: 10px;
             width: 800px;
         }
-        ol.subMenu{
-            padding-left: 15px;
-            width: 96%;
-            display: none;
-            
+        h1{
+            border: 1px solid orange;
         }
         ol#menu{
             padding-left: 0px;
             width: 50%;
+            border: 1px solid rgb(172, 13, 177));
         }
+
+        ol.subMenu{
+            padding-left: 15px;
+            width: 96%;
+            display: none;
+            border: 1px dashed rgb(7, 136, 14);
+            
+        }
+       
         li{
             list-style: none;           /* apaga os marcadores*/
            
@@ -64,26 +72,26 @@ largura total do elemento onde ele está contido, permitindo selecionar o opçã
     <section>
         <h1>Menu 1</h1>        
             <ol id="menu">               
-                <li class="item" onclick="expandir1()"><a href="#">OPÇÃO I</a>
-                    <ol id="subMenu1" class="subMenu" onmouseout="saiu()">
-                        <li><a href="#">Sub-Menu A</a>
-                        <li><a href="#">Sub-Menu B</a>
-                        <li><a href="#">Sub-Menu C</a>
+                <li class="item" onclick="expandir1()"><a href="#">OPÇÃO I</a></li>
+                    <ol id="subMenu1" class="subMenu">                      
+                        <li><a onclick="saiu()" href="#">Sub-Menu A</a></li>
+                        <li><a onclick="saiu()" href="#">Sub-Menu B</a></li>
+                        <li><a onclick="saiu()" href="#">Sub-Menu C</a></li>
                     </ol>            
                 <li class="item" onclick="expandir2()"><a href="#">OPÇÃO II</a>
-                    <ol id="subMenu2" class="subMenu">
+                    <ol id="subMenu2" class="subMenu" onclick="saiu()">
                         <li><a href="#">Sub-Menu A</a>
                         <li><a href="#">Sub-Menu B</a>
                         <li><a href="#">Sub-Menu C</a>
                     </ol>  
                 <li class="item" onclick="expandir3()"><a href="#">OPÇÃO III</a>
-                    <ol id="subMenu3" class="subMenu">
+                    <ol id="subMenu3" class="subMenu" onclick="saiu()">
                         <li><a href="#">Sub-Menu A</a>
                         <li><a href="#">Sub-Menu B</a>
                         <li><a href="#">Sub-Menu C</a>
                     </ol>
                 <li class="item" onclick="expandir4()"><a href="#">OPÇÃO IV</a>
-                    <ol id="subMenu4" class="subMenu">
+                    <ol id="subMenu4" class="subMenu" onclick="saiu()">
                         <li><a href="#">Sub-Menu A</a>
                         <li><a href="#">Sub-Menu B</a>
                         <li><a href="#">Sub-Menu C</a>
@@ -108,7 +116,7 @@ largura total do elemento onde ele está contido, permitindo selecionar o opçã
         }
 
         function saiu(){
-            window.document.getElementById('subMenu1').style.display = 'none'
+            window.document.getElementById('subMenu').style.display = 'none'
             
         }
 
