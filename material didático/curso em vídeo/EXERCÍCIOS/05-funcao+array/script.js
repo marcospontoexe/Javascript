@@ -18,8 +18,8 @@ function adicionar(){
     }
     else{
         lista.push(num)
-        let item = document.createElement('option')     // cria um elmento 'option' dentro do 'select' de maneira dinâmica
-        item.text += `Valor ${num} adicionado!`          // adiciona uma string dentro da 'option' criada (recisa ser com crase)
+        let item = document.createElement('option')     // cria um elemento 'option' dentro do 'select' de maneira dinâmica
+        item.text += `Valor ${num} adicionado!`          // adiciona uma string dentro da 'option' criada (precisa ser com crase)
         item.value = `valor${lista.length}`                            //cria um 'value' (usado em php) para cada 'option' de maneira dinâmica
         visor.appendChild(item)                       // mostra a string dentro da option 
 
