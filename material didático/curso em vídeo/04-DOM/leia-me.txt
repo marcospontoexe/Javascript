@@ -1,4 +1,4 @@
 Document Objetc Model - é um conjunto de objetos dentro do navegador que da acesso aos componentes
-internos do website.
+internos do website (tags e style).
 
 WINDOW é a raiz da árvore DOM
