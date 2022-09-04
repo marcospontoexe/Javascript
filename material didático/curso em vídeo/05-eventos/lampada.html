@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lâmpada</title>
+    <style>
+        div{
+            font-size: 2em;
+            background-color: aqua;
+            color: brown;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            border: 5px solid rgb(5, 59, 59);
+            border-radius: 5px;
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    <div id="area" onmouseenter="mudaLampada(1)" onmouseout="mudaLampada(2)" onclick="mudaLampada(3)">      
+        INTERAJA...
+    </div>
+    <!-- POSÍVEIS EVENTOS DO MOUSE DENTRO DA DIV
+    MOUSEENTER  -> quando o mouse entra na div
+    MOUSEMOVE   ->  quando o mouse se move dentro da div
+    MOUSEDOWN   ->  quando o botão do mouse é apertado e se mantem apertado
+    MOUSEUP     ->  quando o botão do mouse é solto
+    CLICK       -> quando o botão do mouse é apertado e solto no mesmo instante
+    MOUSEOUT    -> quando o mouse sai da div
+    -->
+    
+
+    <script>
+        // MÉTODO COM EVENTOS NO HTML
+        var quebrada = false
+        var a = window.document.getElementById('area')
+        function mudaLampada(tipo){              
+            if(!quebrada){      /*se quabrada for false*/
+                if(tipo == 1){
+                    a.innerText = 'LÂMPADA ASCESA'
+                    a.style.backgroundColor = 'red'
+                    a.style.color = 'white'
+                }
+                if(tipo == 2){
+                    a.innerText = 'LÂMPADA APAGADA'
+                    a.style.backgroundColor = 'white'
+                    a.style.color = 'black'
+                }
+                if(tipo == 3){
+                    a.innerText = 'LÂMPADA QUEBRADA'
+                    a.style.backgroundColor = 'white'
+                    a.style.color = 'black'
+                    quebrada = true
+                }
+            }
+            
+             
+        }            
+        
+    </script>    
+    
+</body>
+</html>
