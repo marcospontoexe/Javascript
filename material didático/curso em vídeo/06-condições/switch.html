@@ -15,7 +15,7 @@
             var agora = new Date()
             var diaSemana = agora.getDay()  // recebe o dia da semana (0=dom, 1=seg, 2=ter...)
             var sem = window.document.getElementById('semana')
-            switch(diaSemana){      /* usa igualdade restrita '===' dentro dos 'case'*/
+            switch(diaSemana){      /* usa igualdade restrita '===' para comparação com o 'case'*/
                 case 0:
                     sem.innerHTML = 'Hoje é <strong>domingo</strong>'
                     break

@@ -14,7 +14,7 @@
             return a-b;
         }
 
-        var numeros = [5, 9, 8]
+        var numeros = [50, 9, 8]
         document.write(`valores do array: ${numeros}. <br>`)
         numeros[3] = 10                 // cria um novo índice (3) com o valor 10 
         numeros.push(5)                 // cria um novo índice (4) com o valor 5 (adiciona no final)
@@ -25,7 +25,7 @@
         document.write(`valores do array após excluir o 1° e ultimo elemento: ${numeros}. <br>`)
         document.write(`tamanho do array: ${numeros.length}. <br>`)
         document.write(`array em ordem crescente sem função: ${numeros.sort()}. <br>`)     // ordena apenas string
-        document.write(`array em ordem crescente com a função: ${numeros.sort(ordena)}. <br>`)     // ordena apenas string
+        document.write(`array em ordem crescente com a função: ${numeros.sort(ordena)}. <br>`)     
 
         for(var i = 0; i< numeros.length; i++){
             document.write(`${numeros[i]} <br>`)

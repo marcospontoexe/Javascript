@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>manipulação de strings</title>
+    <script>
+      var nome = 'Marcos Daniel Santana'
+
+      document.write(`Propriedade string.lenght, para a string ${nome}: `)
+      document.write(nome.length)
+      document.write('<br>') 
+
+      
+      document.write(`Propriedade string.charAt(7), para a string ${nome}: `)
+      document.write(nome.charAt(7))
+      document.write('<br>') 
+      
+      document.write(`Propriedade string.indexOf('S'), para a string ${nome}: `)
+      document.write(nome.indexOf('S'))
+      document.write('<br>') 
+
+      //essa função não altera a string, e sim retorna uma string secundária
+      document.write(`Propriedade string.replace('Santana', 'Silva'), para a string ${nome}: `) 
+      document.write(nome.replace('Santana', 'Silva'))
+      document.write('<br>') 
+      
+      //retorna uma quantidade de caracteres a partir de determinado índice substr(índice, qntd de catacteres)
+      document.write(`Propriedade string.substr(6,4), para a string ${nome}: `)  
+      document.write(nome.substr(6,4))
+      document.write('<br>') 
+      
+      document.write(`Propriedade string.toLocaleLowerCase(), para a string ${nome}: `)  
+      document.write(nome.toLocaleLowerCase())
+      document.write('<br>') 
+
+      document.write(`Propriedade string.toLocaleUpperCase(), para a string ${nome}: `) 
+      document.write(nome.toLocaleUpperCase())
+      document.write('<br>') 
+
+      // remove os espaçõs das estremidades dos caracteres
+      document.write('-'+ nome.trim() + '-')
+      document.write('<br>') 
+    </script>
+    
+  </head>
+
+  <body>
+  </body>
+</html>
