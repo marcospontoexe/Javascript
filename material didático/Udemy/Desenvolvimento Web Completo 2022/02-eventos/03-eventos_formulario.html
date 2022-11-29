@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Eventos para Forms</title>  
+    <style>
+      #msg{
+        height: 500px;
+        width: 300px;
+        margin: auto;
+        background-color: #ccc;
+      }
+    </style>
+  
+    
+  </head>
+
+  <body >
+    <!--
+    ONFOCUS  ->  Ao clicar em um input o evento é disparado
+    ONBLUR   ->  quando o elemento perde o foco (ao apertar a tecla TAB, por exemplo) o evento é disparado
+    ONCHANGE ->   quando o estado do input é modificado o evento é disparado
+    -->
+    <input onfocus="acao1()" onblur="acao2()" type="text">
+
+    <select onchange="acao3()">
+      <option>-- Selecione --</option>
+      <option value="1">Primeira opção</option>
+      <option value="2">Segunda opção</option>
+    </select>
+
+    <div id="msg">
+    </div>
+
+    <script>
+      function acao1()
+      {
+        window.document.getElementById('msg').innerText += ' onfocus  '
+      }
+
+      function acao2()
+      {
+        window.document.getElementById('msg').innerText += ' onblur  '
+      }
+      function acao3()
+      {
+        window.document.getElementById('msg').innerText += ' onchange  '
+      }
+
+    </script>
+  </body>
+</html>
