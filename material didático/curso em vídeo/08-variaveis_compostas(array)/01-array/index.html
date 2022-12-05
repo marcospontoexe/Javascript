@@ -16,15 +16,19 @@
 
         var numeros = [50, 9, 8]
         document.write(`valores do array: ${numeros}. <br>`)
-        numeros[3] = 10                 // cria um novo índice (3) com o valor 10 
+        numeros[3] = 10                 // cria um novo índice (3) com o valor 10         
         numeros.push(5)                 // cria um novo índice (4) com o valor 5 (adiciona no final)
         numeros.unshift(100)            // adiciona no inicio da array
+        numeros['x'] = 11           //o índice não precisa ser numérico
+        // a função lenght(), retornar o valor do p´roximo índice. e não quantidade total de índice existente no array.
+        // quando o índice não inicia com 0, ou quando tem uma string como índice, lenght() retorna quma quantidade falsa
         document.write(`valores do array após novo valor adicionado: ${numeros}. <br>`)
         numeros.pop();              // apaga o ultimo elemento
         numeros.shift();            //apaga o primeiro elemento
         document.write(`valores do array após excluir o 1° e ultimo elemento: ${numeros}. <br>`)
         document.write(`tamanho do array: ${numeros.length}. <br>`)
         document.write(`array em ordem crescente sem função: ${numeros.sort()}. <br>`)     // ordena apenas string
+        //para ordenar números é preciso passar uma função de callback (sem parâmetros)  para a função 'sort()'
         document.write(`array em ordem crescente com a função: ${numeros.sort(ordena)}. <br>`)     
 
         for(var i = 0; i< numeros.length; i++){
