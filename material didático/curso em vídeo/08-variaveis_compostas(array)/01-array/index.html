@@ -27,9 +27,9 @@
         numeros.shift();            //apaga o primeiro elemento
         document.write(`valores do array após excluir o 1° e ultimo elemento: ${numeros}. <br>`)
         document.write(`tamanho do array: ${numeros.length}. <br>`)
-        document.write(`array em ordem crescente sem função: ${numeros.sort()}. <br>`)     // ordena apenas string
+        document.write(`array em ordem crescente sem função de callback: ${numeros.sort()}. <br>`)     // ordena apenas string
         //para ordenar números é preciso passar uma função de callback (sem parâmetros)  para a função 'sort()'
-        document.write(`array em ordem crescente com a função: ${numeros.sort(ordena)}. <br>`)     
+        document.write(`array em ordem crescente com a função de callback: ${numeros.sort(ordena)}. <br>`)     
 
         for(var i = 0; i< numeros.length; i++){
             document.write(`${numeros[i]} <br>`)
@@ -44,6 +44,14 @@
         }
         document.write('<br>')
 
+        document.write(`usando Foreach:`)
+        // só funciona quando os índices dos arrays inicia em zero e é sequencial
+        numeros.forEach(function(valor, indice, array){
+            document.write(`Valor: ${valor}  <br>`)
+            document.write(`Índice: ${indice}  <br>`)
+        })
+        document.write('<br>')
+        
         document.write(`Índice do valor 8: ${numeros.indexOf(8)}. <br>`)
         document.write(`Índice do valor 99: ${numeros.indexOf(99)}. <br>`)
 
