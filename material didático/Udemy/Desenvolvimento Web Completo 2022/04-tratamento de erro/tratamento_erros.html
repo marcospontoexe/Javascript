@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Tratamento de erros</title>  
+
+</head>
+
+<body>
+  <script>      
+    var video = Array()
+
+    video[0] = Array()  // cria um array bidimensional
+    video[0]['nome'] = 'Fullmetal Alchemist'
+    video[0]['categoria'] = 'Anime'
+
+    function getVideo(video){
+
+      try {    // tenta executar o código, caso não consiga, chama a função 'catch'  
+        document.write(video[1]['nome']) // 'video[1]' ainda não foi declarado
+        document.write('<br/>')
+        document.write('<br/>')
+      } 
+      catch(erro){   //o parâmetro 'erro' recebe o erro ocorrido durante o bloco 'try'   
+        document.write('Agora sim podemos tratar esse erro:')
+        document.write('<br/>')
+        document.write(erro)
+        document.write('<br/>')
+        // o 'throw' acrescenta uma mensagem ao erro capturado pelo 'catch'
+        throw new Error(document.write('Houve um erro mas não se preocupe, estamos trabalhando nisso agora!'+'<br/>'+'<br/>'))
+        
+      } 
+      finally{  //esse bloco sempre será exectado, idependente se houve erro ou não
+        document.write('Sempre passa por aqui (try / catch)')
+        document.write('<br/>')
+        document.write('<br/>')
+      }
+
+      document.write('A aplicação não morreu')
+      document.write('<br/>')
+      document.write('<br/>')
+    }
+    
+
+    getVideo(video)
+  </script>
+
+</body>
+
+</html>
