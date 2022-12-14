@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Usando o objeto Timing do BOM</title>  
+
+</head>
+
+<body>
+  <script>
+    //setTimeout executa uma ação após o tempo informado em milisegundos
+    //setInterval executa uma ação sempre tempo informado em milisegundos é atingido
+    // clearTimeout()  finaliza o objeto setTimeout()
+   
+   var a = setTimeout(function(){document.write(' Teste ' + '<br />')}, 3000)
+   
+
+   var i = 5
+   var j = 0
+   var x =  setInterval(
+              function(){
+                document.write(i)
+                i--                
+                if(i == 0){
+                  clearInterval(x)  // finaliza o objeto setInterval()
+                  //window.location.reload()  // recarrega a página
+                }
+
+              }, 1000)
+
+
+    
+  </script>
+
+</body>
+
+</html>
