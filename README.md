@@ -406,7 +406,7 @@ document.getElementById("texto3").innerHTML = text; // Mostra lista de frutas
 
 O **Document Object Model (DOM)** é a representação dos objetos que compõem a estrutura e o conteúdo de um documento na Web. Com base nessa estrutura de árvore de objetos, o JavaScript consegue acessar e alterar todos os elementos em um documento HTML.
 
-![Figura)](https://github.com/marcospontoexe/Javascript/blob/main/imagens/5.jpeg) 
+![Figura 3: Document Object Model (DOM))](https://github.com/marcospontoexe/Javascript/blob/main/imagens/5.jpeg) 
 
 **Estrutura:**
 
@@ -415,9 +415,6 @@ O **Document Object Model (DOM)** é a representação dos objetos que compõem 
 - **Attr:** é usado para representar um atributo de um elemento.  
 - **Texto:** é o conteúdo interno de um elemento ou Attr.  
 - **Document:** representa o documento como um todo.
-
-![Figura 3: Document Object Model (DOM)](sandbox:/mnt/data/image_page8_1.jpeg)  
-<!-- Fundo: Geeks for Geeks (2022). #ParaTodosVerem -->
 
 > **SAIBA MAIS**  
 > - [https://developer.mozilla.org/pt-BR/docs/Web/API/Document_Object_Model/Introduction](https://developer.mozilla.org/pt-BR/docs/Web/API/Document_Object_Model/Introduction)  
@@ -470,12 +467,14 @@ O método `addEventListener` permite adicionar múltiplos manipuladores de event
 _Exemplo de uso:_
 
 ```js
+//Adiciona evento de click a um botão com id=meuBotao
 document.getElementById('meuBotao').addEventListener('click', function() {
-  alert('Botão clicado!');
+    alert('Botão clicado!');
 });
 
+//Adiciona evento de change a um input com id=cpf
 document.getElementById('cpf').addEventListener('change', function() {
-  alert('Realizando validação do CPF!');
+    alert('Realizando validação do CPF!');
 });
 ```
 
@@ -489,9 +488,9 @@ _Exemplo de uso:_
 
 ```js
 document.addEventListener('DOMContentLoaded', function() {
-  // Imprime no console um aviso quando a página foi carregada
-  console.log('O DOM foi completamente carregado e analisado.');
-  // Inserimos aqui nosso código JavaScript que manipula elementos do DOM
+    //Imprime no console um aviso quando a página foi carregada
+    console.log('O DOM foi completamente carregado e analisado.');
+    // Inserimos aqui nosso código JavaScript que manipula elementos do DOM
 });
 ```
 
@@ -558,7 +557,6 @@ Ao tirar o mouse do botão "Passe o mouse sobre mim", o parágrafo mensagemHover
 
 
 > **SAIBA MAIS**  
-> Praticando comandos no JavaScript:  
 > - [https://www.w3schools.com/js/js_htmldom_elements.asp](https://www.w3schools.com/js/js_htmldom_elements.asp)  
 > - [https://developer.mozilla.org/pt-BR/docs/Web/API/Document/getElementById](https://developer.mozilla.org/pt-BR/docs/Web/API/Document/getElementById)  
 > - [https://developer.mozilla.org/pt-BR/docs/Web/API/Document/getElementsByClassName](https://developer.mozilla.org/pt-BR/docs/Web/API/Document/getElementsByClassName)  
@@ -628,8 +626,7 @@ acompanhar a lógica do programa.
 >   - `<p class="texto3"></p>`  
 > - O valor `textos.length` informa o total de elementos do array.
 
-![Figura 4: Alterando um grupo de elementos HTML com JavaScript](sandbox:/mnt/data/image_page12_1.jpeg)  
-<!-- #ParaTodosVerem -->
+![Figura 4: Alterando um grupo de elementos HTML com JavaScript](https://github.com/marcospontoexe/Javascript/blob/main/imagens/6.jpeg)  
 
 ---
 
@@ -642,42 +639,56 @@ O uso de um botão HTML (`<button>`) permite chamar um trecho em JavaScript que 
 ```html
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="utf-8">
-  <title>Teste de Comandos JS</title>
-  <style>
-    html {
-      font-family: 'Lucida Sans';
-    }
-    body {
-      width: 70%;
-      max-width: 900px;
-      min-width: 500px;
-      margin: 0 40px;
-    }
-  </style>
-</head>
-<body>
-  <h2>Alterar Atributos de Imagem</h2>
-  <img id="minhaLampada" src="lampada_apagada.jpg" alt="Lâmpada">
-  <br><br>
-  <button type="button" onclick="acenderLampada()">Acender Lâmpada</button>
-  <button type="button" onclick="apagarLampada()">Apagar Lâmpada</button>
 
-  <script>
-    function acenderLampada() {
-      document.getElementById('minhaLampada').src = 'lampada_acesa.jpg';
+<head>
+    <meta charset="utf-8">
+    <title>Teste de Comandos JS</title>
+    <style>
+    html {
+        font-family: 'Lucida Sans';
     }
-    function apagarLampada() {
-      document.getElementById('minhaLampada').src = 'lampada_apagada.jpg';
+
+    body {
+        width: 70%;
+        max-width: 900px;
+        min-width: 500px;
+        margin: 0 40px;
     }
-  </script>
+
+    button {
+        width: 250px;
+    }
+    </style>
+</head>
+
+<body>
+    <h4>JS pode alterar os <b>atributos de elementos</b> HTML</h4>
+    <p>Alterando o valor do atributo src (source) de uma imagem:</p>
+    <img id="img" src="img/lamp_Off.png" style="width:100px"><br> <!-- Imagem original -->
+    <button id="acender">Acende a Lâmpada</button>
+    <button id="apagar">Apaga a Lâmpada</button>
+    <br>
+    <script>
+    // Espera até que o DOM esteja totalmente carregado
+    document.addEventListener('DOMContentLoaded', function() {
+        // Adiciona um event listener ao botão "Acender"
+        document.getElementById('acender').addEventListener('click', function() {
+            // Muda o atributo 'src' da imagem para acender a lâmpada
+            document.getElementById('img').src = 'img/lamp_On.png';
+        });
+        // Adiciona um event listener ao botão "Apagar"
+        document.getElementById('apagar').addEventListener('click', function() {
+            // Muda o atributo 'src' da imagem para apagar a lâmpada
+            document.getElementById('img').src = 'img/lamp_Off.png';
+        });
+    });
+    </script>
 </body>
+
 </html>
 ```
 
-![Figura 5: Alterando atributos HTML com JavaScript](sandbox:/mnt/data/image_page13_1.jpeg)  
-<!-- #ParaTodosVerem -->
+![Figura 5: Alterando atributos HTML com JavaScript](https://github.com/marcospontoexe/Javascript/blob/main/imagens/7.jpeg)  
 
 ---
 
@@ -690,36 +701,54 @@ O uso de um botão HTML (`<button>`) permite chamar um trecho em JavaScript que 
 ```html
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="utf-8">
-  <title>Teste de Comandos JS</title>
-  <style>
-    html {
-      font-family: 'Lucida Sans';
-    }
-    body {
-      width: 70%;
-      max-width: 900px;
-      min-width: 500px;
-      margin: 0 40px;
-    }
-  </style>
-</head>
-<body> 
-  <h2>Alterar Conteúdo de Parágrafo</h2>
-  <p id="meuParagrafo">Texto original.</p>
-  <button type="button" onclick="mudarConteúdo()">Mudar Conteúdo</button>
 
-  <script>
-    function mudarConteúdo() {
-      document.getElementById('meuParagrafo').textContent = 'Conteúdo alterado pelo JavaScript!';
+<head>
+    <meta charset="utf-8">
+    <title>Teste de Comandos JS</title>
+    <style>
+    html {
+        font-family: 'Lucida Sans';
     }
-  </script>
+
+    body {
+        width: 70%;
+        max-width: 900px;
+        min-width: 500px;
+        margin: 0 40px;
+    }
+
+    button {
+        width: 250px;
+    }
+    </style>
+</head>
+
+<body>
+    <h4>JS pode alterar o conteúdo interno de elementos HTML</h4>
+    <p id="meuTexto">Este é o texto original.</p> <!-- Conteúdo interno original -->
+    <button type="button" id="mudarTexto">Clique para mudar o texto!</button>
+    <button type="button" id="voltarTexto">Clique para voltar ao texto original!</button><br>
+    <script>
+    // Espera até que o DOM esteja totalmente carregado
+    document.addEventListener('DOMContentLoaded', function() {
+        // Adiciona um event listener ao botão "Clique para mudar o texto!"
+        document.getElementById('mudarTexto').addEventListener('click', function() {
+            // Muda o conteúdo interno do elemento <p> com id "meuTexto"
+            document.getElementById('meuTexto').innerHTML = "Olá, eu sou o JavaScript!";
+        });
+        // Adiciona um event listener ao botão "Clique para voltar ao texto original!"
+        document.getElementById('voltarTexto').addEventListener('click', function() {
+            // Volta o conteúdo interno do elemento <p> com id "meuTexto" para o original
+            document.getElementById('meuTexto').innerHTML = "Este é o texto original.";
+        });
+    });
+    </script>
 </body>
+
 </html>
 ```
 
-![Figura 6: Alterando conteúdo HTML com JavaScript](sandbox:/mnt/data/image_page14_1.jpeg)  
+![Figura 6: Alterando conteúdo HTML com JavaScript](https://github.com/marcospontoexe/Javascript/blob/main/imagens/8.jpeg)  
 <!-- #ParaTodosVerem -->
 
 ---
@@ -733,43 +762,54 @@ O uso de um botão HTML (`<button>`) permite chamar um trecho em JavaScript que 
 ```html
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="utf-8">
-  <title>Teste de Comandos JS</title>
-  <style>
-    html {
-      font-family: 'Lucida Sans';
-    }
-    body {
-      width: 70%;
-      max-width: 900px;
-      min-width: 500px;
-      margin: 0 40px;
-    }
-    p {
-      font-size: 16px;
-    }
-  </style>
-</head>
-<body>
-  <h2>Alterar Estilo de Parágrafo</h2>
-  <p id="paragrafoEstilo">Este texto terá o estilo alterado.</p>
-  <button type="button" onclick="aumentarFonte()">Aumentar Fonte</button>
-  <button type="button" onclick="diminuirFonte()">Diminuir Fonte</button>
 
-  <script>
-    function aumentarFonte() {
-      document.getElementById('paragrafoEstilo').style.fontSize = '24px';
+<head>
+    <meta charset="utf-8">
+    <title>Teste de Comandos JS</title>
+    <style>
+    html {
+        font-family: 'Lucida Sans';
     }
-    function diminuirFonte() {
-      document.getElementById('paragrafoEstilo').style.fontSize = '12px';
+
+    body {
+        width: 70%;
+        max-width: 900px;
+        min-width: 500px;
+        margin: 0 40px;
     }
-  </script>
+
+    button {
+        width: 250px;
+    }
+    </style>
+</head>
+
+<body>
+    <h4>JS pode alterar o estilo de elementos HTML</h4>
+    <p id="meuTexto1">Outro texto original.</p>
+    <button type="button" id="mudarFonte">Clique para mudar o tamanho da fonte!</button>
+    <button type="button" id="voltarFonte">Clique para voltar à fonte original!</button><br>
+    <script>
+    // Espera até que o DOM esteja totalmente carregado
+    document.addEventListener('DOMContentLoaded', function() {
+        // Adiciona um event listener ao botão "Clique para mudar o tamanho da fonte!"
+        document.getElementById('mudarFonte').addEventListener('click', function() {
+            // Muda o tamanho da fonte do elemento <p> com id "meuTexto1"
+            document.getElementById('meuTexto1').style.fontSize = "20px";
+        });
+        // Adiciona um event listener ao botão "Clique para voltar à fonte original!"
+        document.getElementById('voltarFonte').addEventListener('click', function() {
+            // Volta o tamanho da fonte do elemento <p> com id "meuTexto1" para o original
+            document.getElementById('meuTexto1').style.fontSize = "medium";
+        });
+    });
+    </script>
 </body>
+
 </html>
 ```
 
-![Figura 7: Alterando estilo HTML com JavaScript](sandbox:/mnt/data/image_page15_1.jpeg)  
+![Figura 7: Alterando estilo HTML com JavaScript](https://github.com/marcospontoexe/Javascript/blob/main/imagens/9.jpeg)  
 <!-- #ParaTodosVerem -->
 
 ---
@@ -783,233 +823,53 @@ O uso de um botão HTML (`<button>`) permite chamar um trecho em JavaScript que 
 ```html
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="utf-8">
-  <title>Teste de Comandos JS</title>
-  <style>
-    html {
-      font-family: 'Lucida Sans';
-    }
-    body {
-      width: 70%;
-      max-width: 900px;
-      min-width: 500px;
-      margin: 0 40px;
-    }
-    #paragrafoOculto {
-      display: block;
-    }
-  </style>
-</head>
-<body>
-  <h2>Ocultar/Exibir Parágrafo</h2>
-  <p id="paragrafoOculto">Este texto pode ser ocultado ou exibido.</p>
-  <button type="button" onclick="ocultarParagrafo()">Ocultar</button>
-  <button type="button" onclick="exibirParagrafo()">Exibir</button>
 
-  <script>
-    function ocultarParagrafo() {
-      document.getElementById('paragrafoOculto').style.display = 'none';
+<head>
+    <meta charset="utf-8">
+    <title>Teste de Comandos JS</title>
+    <style>
+    html {
+        font-family: 'Lucida Sans';
     }
-    function exibirParagrafo() {
-      document.getElementById('paragrafoOculto').style.display = 'block';
+
+    body {
+        width: 70%;
+        max-width: 900px;
+        min-width: 500px;
+        margin: 0 40px;
     }
-  </script>
+
+    button {
+        width: 250px;
+    }
+    </style>
+</head>
+
+<body>
+    <h4>JS pode ocultar ou mostrar elementos HTML</h4>
+    <p id="meuTexto2">Um outro texto original.</p>
+    <button type="button" id="ocultarTexto">Clique para ocultar o texto!</button>
+    <button type="button" id="mostrarTexto">Clique para mostrar o texto!</button><br><br><br>
+    <script>
+    // Espera até que o DOM esteja totalmente carregado
+    document.addEventListener('DOMContentLoaded', function() {
+        // Adiciona um event listener ao botão "Clique para ocultar o texto!"
+        document.getElementById('ocultarTexto').addEventListener('click', function() {
+            // Oculta o elemento <p> com id "meuTexto2"
+            document.getElementById('meuTexto2').style.display = "none";
+        });
+        // Adiciona um event listener ao botão "Clique para mostrar o texto!"
+        document.getElementById('mostrarTexto').addEventListener('click', function() {
+            // Mostra o elemento <p> com id "meuTexto2"
+            document.getElementById('meuTexto2').style.display = "block";
+        });
+    });
+    </script>
 </body>
+
 </html>
 ```
 
-![Figura 8: Ocultar ou exibir elemento HTML com JavaScript](sandbox:/mnt/data/image_page16_1.jpeg)  
-<!-- #ParaTodosVerem -->
+![Figura 8: Ocultar ou exibir elemento HTML com JavaScript](https://github.com/marcospontoexe/Javascript/blob/main/imagens/9.jpeg)  
 
 ---
-
-## Atividade Formativa 1
-
-Execute o exercício proposto na videoaula-tutorial a seguir, para criar um jogo para adivinhar o número, que usa HTML, CSS e JavaScript. Nesta prática, além de criar vários elementos HTML, você poderá verificar como podemos adicionar lógica de programação e dinamicidade para incrementar a interação entre usuário e a página web. Indicamos sempre o uso de um ambiente de desenvolvimento adequado, como o VS Code ([https://code.visualstudio.com/download](https://code.visualstudio.com/download)), que sempre auxilia na escrita dos códigos.
-
-Vamos criar um jogo que pede ao usuário um palpite sobre um número secreto, selecionado aleatoriamente. Ele tem 10 chances de acertar, e o jogo ainda dá dicas se o usuário está perto ou não de adivinhar o número secreto.
-
-Para isso, o jogo usa elementos HTML, estilo CSS e programação com JavaScript para:  
-- Criar e manipular variáveis.  
-- Acessar e alterar os elementos HTML.  
-- Controlar o fluxo do jogo para permitir até 10 palpites e verificar se algum palpite adivinha o número secreto.
-
-Você pode utilizar os códigos de referência, apresentados a seguir, para incluir o código JavaScript.
-
-![Figura 9: Demo do jogo Adivinhe o Número](sandbox:/mnt/data/image_page18_1.jpeg)  
-<!-- #ParaTodosVerem -->
-
----
-
-> **DICA**  
-> ATENÇÃO: O código apresentado apresenta duas características específicas:  
-> 1. Utilização da palavra reservada `var` para a declaração de variáveis JavaScript.  
-> 2. Atribuição de eventos JavaScript aos elementos utilizando um atributo diretamente no HTML (por exemplo: `onclick="conferirPalpite();"`)  
->  
-> Ao realizar a atividade, você deve melhorar o código para ele ficar mais aderente às boas práticas que foram mostradas nos exemplos desta Unidade, ou seja:  
-> - Substitua a utilização de `var` por `let` ou `const`.  
-> - Realize a atribuição de eventos utilizando a função `addEventListener`.  
-> - Utilize o evento `DOMContentLoaded` para garantir que a página esteja carregada antes de atribuir eventos.  
->  
-> Mãos à obra!  
->  
-> Este tutorial é baseado no exemplo "Um primeiro mergulho no JavaScript", disponível em:  
-> [https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/A_first_splash](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/A_first_splash)  
->  
-> **Estrutura HTML de referência**  
-> - [https://www.youtube.com/watch?v=0TO0w5XDwPg](https://www.youtube.com/watch?v=0TO0w5XDwPg)  
-> - [https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/A_first_splash](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/A_first_splash)
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>Jogo Adivinhe um número</title>
-  <style>
-    html {
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
-    body {
-      width: 70%;
-      max-width: 900px;
-      min-width: 500px;
-      margin: 0 40px;
-    }
-  </style>
-</head>
-<body>
-
-  <h1>Jogo Adivinhe um número</h1>
-  <p>Selecionamos um número aleatório entre <b>1</b> e <b>100</b>.</p>
-  <p>Veja se consegue adivinhar em <b>10</b> chances o número secreto.</p>
-  <p>Nós lhe diremos se seu palpite está com valor <b>baixo</b> ou <b>alto</b>.</p>
-
-  <div class="form">
-    <label for="campoPalpite">Digite seu palpite: </label>
-    <input type="text" id="campoPalpite" class="campoPalpite">
-    <input type="submit" value="Enviar palpite" class="envioPalpite">
-  </div>
-
-  <div class="cjtoResultados">
-    <p class="palpites"></p>
-    <p class="ultimoResultado"></p>
-    <p class="baixoOuAlto"></p>
-  </div>
-
-  <script>
-    // O Código JavaScript será inserido aqui.
-  </script>
-
-</body>
-</html>
-```
-
----
-
-### JavaScript para tratar variáveis
-
-```js
-// Cria um número aleatório entre 1 e 100
-var numeroAleatorio = Math.floor(Math.random() * 100) + 1;
-
-// Cria variáveis ligadas a elementos com as classes indicadas
-// para ATUALIZAR esses elementos de acordo com as jogadas
-var palpites = document.querySelector('.palpites');
-var ultimoResultado = document.querySelector('.ultimoResultado');
-var baixoOuAlto = document.querySelector('.baixoOuAlto');
-
-// Cria variáveis para elementos INPUT com as classes indicadas
-// para OBTER DADOS desses elementos de acordo com as jogadas
-var envioPalpite = document.querySelector('.envioPalpite');
-var campoPalpite = document.querySelector('.campoPalpite');
-var contagemPalpites = 1;  // Inicia a contagem dos palpites
-var botaoReinicio;
-```
-
----
-
-### JavaScript para tratar fim de jogo
-
-```js
-function configFimDeJogo() {
-  campoPalpite.disabled = true;    // desabilita campo de entrada
-  envioPalpite.disabled = true;    // desabilita botão de envio
-  botaoReinicio = document.createElement('button');
-  botaoReinicio.textContent = 'Iniciar novo jogo';
-  document.body.appendChild(botaoReinicio);
-  botaoReinicio.addEventListener('click', reiniciarJogo);
-}
-```
-
----
-
-### JavaScript para tratar reinício de jogo
-
-```js
-function reiniciarJogo() {
-  contagemPalpites = 1;
-
-  var reiniciarParas = document.querySelectorAll('.cjtoResultados p');
-  for (var i = 0; i < reiniciarParas.length; i++) {
-    reiniciarParas[i].textContent = '';
-  }
-
-  botaoReinicio.parentNode.removeChild(botaoReinicio);
-  campoPalpite.disabled = false;
-  envioPalpite.disabled = false;
-  campoPalpite.value = '';
-  campoPalpite.focus();
-  ultimoResultado.style.backgroundColor = 'white';
-  numeroAleatorio = Math.floor(Math.random() * 100) + 1;
-}
-```
-
----
-
-### JavaScript para conferir palpite
-
-```js
-function conferirPalpite() {
-  var palpiteUsuario = Number(campoPalpite.value);
-
-  if (contagemPalpites === 1) {
-    palpites.textContent = 'Palpites anteriores: ';
-  }
-  palpites.textContent += palpiteUsuario + ' ';
-
-  // IMPORTANTE: este código está incompleto nesta parte.
-  // Assista à vídeo-aula tutorial para completar a lógica.
-
-  contagemPalpites++;
-  campoPalpite.value = '';
-  campoPalpite.focus();
-}
-```
-
----
-
-## Conclusão
-
-Olá!
-
-Com esta unidade, finalizamos o planejado na disciplina para o desenvolvimento web front-end!  
-Vimos como a linguagem de programação JavaScript aumenta consideravelmente o poder de interação e dinamicidade da aplicação com o cliente, a partir de um navegador. E tudo isso sem necessariamente precisar recorrer ao lado servidor da aplicação, aproveitando a capacidade de processamento computacional da máquina do usuário. 😉
-
-Na próxima unidade, começaremos a praticar programação back-end com PHP, uma linguagem de programação feita para ser executada em um servidor HTTP, que processa páginas HTML dinâmicas para envio ao navegador.
-
-**Em resumo, em uma aplicação web, temos:**
-
-- **Lado front-end**, ou lado cliente, que interage com o usuário e garante que os dados que serão enviados ao lado servidor estejam no formato adequado (faz a validação dos dados). Nele, desenvolvemos com as linguagens **HTML**, **CSS** e **JavaScript**.  
-- **Lado back-end**, ou lado servidor, que processa as solicitações do usuário e devolve páginas HTML geradas dinamicamente, de acordo com a requisição recebida do cliente. Nele, utilizaremos as linguagens **PHP** e **SQL**, que serão vistas nas próximas unidades de estudo.
-
----
-
-## Referências Bibliográficas
-
-- **ALVES, W. P.** _Desenvolvimento e design de sites_. São Paulo: Érica, 2014.  
-- **MILETTO, E. M.; BERTAGNOLLI, S. C.** _Desenvolvimento de software II: Introdução ao desenvolvimento web com HTML, CSS, JavaScript e PHP_. Porto Alegre: Bookman, 2014.  
-- **TERUEL, E. C.** _HTML 5: Guia prático_. 2. ed. Porto Alegre: Bookman, 2014.  
-
-© PUCPR – Todos os direitos reservados.  
