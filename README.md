@@ -11,7 +11,6 @@ dessa linguagem.
   principalmente para desenvolvimento web, mas que também pode ser utilizada para o
   desenvolvimento de software de forma geral.
 
----
 
 > **IMPORTANTE**
 >
@@ -30,7 +29,6 @@ dessa linguagem.
 > **JavaScript não é Java.** São linguagens completamente diferentes,  
 > tanto em conceito quanto em projeto.  
 
----
 
 **HTML + CSS + JavaScript**
 
@@ -38,37 +36,11 @@ dessa linguagem.
 - O **CSS** formata a exibição dos elementos HTML, ou trata o estilo de apresentação do conteúdo do documento.  
 - O **JavaScript** melhora a interatividade do cliente com a aplicação, ou controla os conteúdos do documento para que eles sejam utilizados pelo usuário conforme definido pelas funcionalidades e requisitos da aplicação.
 
-Links úteis:  
-- [https://nodejs.org/pt-br/about/](https://nodejs.org/pt-br/about/)  
-- [https://www.ecma-international.org/](https://www.ecma-international.org/)
+![Figura 1](https://github.com/marcospontoexe/Javascript/blob/main/imagens/1.jpeg)
 
 ---
 
-## Primeiro exemplo com JavaScript
-
-> **Fonte:** A autora (2023).
-
-Antes de estudar o material, vamos conhecer melhor que resultados podemos esperar ao
-trabalhar com JavaScript. Veja alguns exemplos apresentados nesta videoaula:
-
-[![Trabalhando com o JavaScript](https://img.youtube.com/vi/9AdFXcv3Rjs/0.jpg)](https://www.youtube.com/watch?v=9AdFXcv3Rjs)
-
-Na videoaula **Trabalhando com o JavaScript**, vimos que podemos usar a janela de inspeção do
-navegador, como o Google Chrome, para executar comandos JavaScript. Contudo, o melhor local
-para nosso desenvolvimento JavaScript front-end é em um IDE (ambiente de desenvolvimento
-integrado), em arquivos HTML, ou arquivos próprios para o JavaScript, com a extensão `.js`.
-
-Portanto, vamos criar uma pasta na nossa máquina, por exemplo, na pasta `C:/Teste-JS`, que será
-editada com um IDE como o VS Code. Vamos executar a prática a seguir.
-
----
-
-### PRÁTICA: O meu primeiro HTML com JavaScript
-
-Siga os passos indicados a seguir para ver o JavaScript funcionando.
-
-1. Crie uma pasta de trabalho, como `C:/Teste-JS`.
-2. Dentro dela, crie um documento `PrimeiroTesteJS.html`, com o código exemplificado a seguir. Após salvar o código, abra o arquivo no navegador.
+## PRÁTICA: O meu primeiro HTML com JavaScript
 
 ```html
 <!DOCTYPE html>
@@ -95,8 +67,7 @@ Siga os passos indicados a seguir para ver o JavaScript funcionando.
 > - O método JavaScript `Date()` retorna a data e a hora atuais.  
 > - Como o elemento `<p>` está após o elemento `<button>`, o texto com a data e hora atuais aparece após o botão, como indicado na figura deste exemplo.
 
-![Figura 1: HTML com JavaScript](sandbox:/mnt/data/image_page2_1.jpeg)  
-<!-- #ParaTodosVerem -->
+![Figura 2: HTML com JavaScript](https://github.com/marcospontoexe/Javascript/blob/main/imagens/2.jpeg)  
 
 ---
 
@@ -112,12 +83,7 @@ Neste exemplo fizemos a definição do evento de `click` do botão diretamente e
 
 ---
 
-### PRÁTICA: Tratamento de entrada de dados com JavaScript
-
-Siga os passos indicados a seguir para ver o JavaScript funcionando.
-
-1. Crie um documento `Ola-JS.html` em `C:/Teste-JS`.  
-2. Após salvar o código, abra o arquivo no navegador.
+### Tratamento de entrada de dados com JavaScript
 
 ```html
 <!DOCTYPE html>
