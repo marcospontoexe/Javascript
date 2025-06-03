@@ -47,17 +47,15 @@ dessa linguagem.
 <html>
 <body>
 
-  <h2>Meu primeiro JavaScript</h2>
+<h2>Meu primeiro Javascript</h2>
 
-  <button type="button" onclick="document.getElementById('textoDataHora').innerHTML = new Date();">
-    Clique em mim para apresentar a data e hora atuais.
-  </button>
+<button type="button" onclick = "document.getElementById('textoDataHora').innerHTML = Date()">
+Clique em mim para apresentar a data e hora atuais.</button>
 
-  <p id="textoDataHora"></p> <!-- Elemento HTML parágrafo, inicialmente está vazio -->
-                             <!-- Após clicar no botão, o JS muda innerHTML=data+hora -->
-
-</body>
-</html>
+<p id="textoDataHora"></p> <!-- Elemento HTML parágrafo,   -->                         
+                           <!-- inicialmente está vazio   -->
+</body>                    <!-- Após clicar no botão, o JS -->
+</html>                    <!--  muda innerHTML=data+hora  -->
 ```
 
 > **Observe no código HTML:**  
@@ -87,31 +85,33 @@ Neste exemplo fizemos a definição do evento de `click` do botão diretamente e
 <!DOCTYPE html>
 <html>
 <body>
-  <h2>Demonstração de JavaScript</h2>
-  <p id="nom">Para conhecer você, clique no botão abaixo</p>
-  <p id="num"></p>
-  <br>
-  <p id="tp_nom"></p>
-  <p id="tp_num"></p>
-  <button type="button" onclick="myFunction()">Ao acionar este botão, visualize informações</button>
-
-  <script>
+    <h2>Demonstração de JavaScript</h2>
+    <p id="nom">Para conhecer você, clique no botão abaixo</p>
+    <p id="num"></p>
+    <br>
+    <p id="tp_nom"></p>
+    <p id="tp_num"></p>
+    <button type="button" onclick="myFunction()">Ao acionar este botão, vou conhecer você!</button>
+    
+    <script>
     // Declara uma função sem parâmetros de entrada.
     function myFunction() {
-      // Declara variáveis "nom" e "num"
-      // Em seguida atribui os valores digitados pelo usuário no "prompt"
-      let nom = prompt("Qual o seu nome?");
-      let num = prompt("Qual o seu número favorito?");
+    
+        // Declara variáveis "nome" e "num"
+        // Em seguida atribui os valores digitados pelo usuário, no "prompt"
+        let nom = prompt("Qual o seu nome? ");
+        let num = prompt("Qual o seu número favorito? ");
 
-      // Exibe as informações na página
-      document.getElementById("nom").innerHTML = "Olá, " + nom + "!";
-      document.getElementById("num").innerHTML = "Seu número favorito é: " + num;
+        // Usa as respostas do usuário para apresentar a informação no HTML
+        document.getElementById("nom").innerHTML = "Olá " + nom + "! É muito bom conhecer você!";
+        document.getElementById("num").innerHTML = num + " também é meu número preferido! :D";
 
-      // Exibe os tipos de cada variável
-      document.getElementById("tp_nom").innerHTML = "O tipo de 'nom' é: " + typeof nom;
-      document.getElementById("tp_num").innerHTML = "O tipo de 'num' é: " + typeof num;
+        // Exibe os tipos de dados das variáveis "nom" e "num" dos elementos HTML com id="tp_nom" e id="tp_num"
+        document.getElementById("tp_nom").innerHTML = "A variável \"nom\" é uma " + typeof nom;
+        document.getElementById("tp_num").innerHTML = "A variável \"num\" é uma " + typeof num;
+        
     }
-  </script>
+    </script>
 </body>
 </html>
 ```
@@ -242,7 +242,7 @@ Com valores numericos podemos realizar as operações aritméticas:
 
 ---
 
-### 3. Condicional no JavaScript
+### Condicional no JavaScript
 
 **Condicional**  
 Permite tomada de decisão. A estrutura mais simples está apresentada a seguir:
@@ -257,11 +257,11 @@ Porém, é possível encadear várias tomadas de decisão:
 
 ```js
 if (condição1) {
-  // bloco a ser executado se a "condição1" for VERDADEIRA  
+  // bloco a ser executado se a "condição1" for VERDADE  
 } else if (condição2) {
-  // bloco a ser executado se a "condição1" for FALSA e a "condição2" for VERDADEIRA
+ // bloco a ser executado se a "condição1" for FALSA e a "condição2" for VERDADE  
 } else {
-  // bloco a ser executado se a "condição1" for FALSA e a "condição2" for FALSA
+ // bloco a ser executado se a "condição1" for FALSA e a "condição2" for FALSA
 }
 ```
 
@@ -271,7 +271,7 @@ if (condição1) {
 
 ---
 
-### 4. Switch no JavaScript
+### Switch no JavaScript
 
 **Switch**  
 Poderosa estrutura para tomada de decisão que permite selecionar um ou vários blocos de  
@@ -279,7 +279,7 @@ comandos para serem executados. É uma alternativa mais estruturada para encadea
 de `if/else`:
 
 ```js
-switch (expression) {
+switch(expression) {
   case x:
     // bloco de código executa se "expression" é igual a x
     break;
@@ -297,7 +297,7 @@ switch (expression) {
 
 ---
 
-### 5. Laço de repetição no JavaScript
+### Laço de repetição no JavaScript
 
 **Laço de repetição (loop)**  
 A estrutura mais simples do tipo `for` está apresentada a seguir:
@@ -326,7 +326,7 @@ while (i < 5) {
 
 ---
 
-### 6. Array no JavaScript
+### Array no JavaScript
 
 **Array**  
 Variável estruturada que mantém elementos que possuem características em comum, de forma ordenada:
@@ -338,15 +338,33 @@ let frutas = ['Abacate', 'Uva', 'Limão'];
 Uma das maneiras mais comuns para percorrer e acessar cada um dos elementos de um array é com um laço de repetição do tipo `for`:
 
 ```js
-let frutas = ['Abacate', 'Uva', 'Limão'];
-let text = "";
+<!DOCTYPE html>
+<html>
+<body>
+<h2>JavaScript Arrays</h2>
+<p id="texto1"></p>
+<p id="texto2"></p>
+<p id="texto3"></p>
+<script>
+var frutas = ['Abacate', 'Uva', 'Limão'];
+var minhaFruta = frutas[1];   // Uva
+var fTam = frutas.length;     // Informa o total de elementos no array
+document.getElementById("texto1").innerHTML = 'Minha fruta = ' + minhaFruta;
+document.getElementById("texto2").innerHTML = 'Total de frutas = ' + fTam;
 
-for (let i = 0; i < frutas.length; i++) {
-  text += "<li>" + frutas[i] + "</li>";
+var text = "<ul>";
+for (let i = 0; i < fTam; i++) {          // For que percorre o array e
+  text += "<li>" + frutas[i] + "</li>";   // monta o HTML de lista
 }
-text = "<ul>" + text + "</ul>";
-document.getElementById("demo").innerHTML = text;
+text += "</ul>";                                    // finaliza o HTML de lista
+document.getElementById("texto3").innerHTML = text; // Mostra lista de frutas
+</script>
+</body>
+</html>
+
 ```
+
+![Figura)](https://github.com/marcospontoexe/Javascript/blob/main/imagens/4.jpeg) 
 
 > **SAIBA MAIS**  
 > - [https://www.w3schools.com/js/js_arrays.asp](https://www.w3schools.com/js/js_arrays.asp)  
@@ -387,6 +405,8 @@ document.getElementById("demo").innerHTML = text;
 ## DOM – Visão geral
 
 O **Document Object Model (DOM)** é a representação dos objetos que compõem a estrutura e o conteúdo de um documento na Web. Com base nessa estrutura de árvore de objetos, o JavaScript consegue acessar e alterar todos os elementos em um documento HTML.
+
+![Figura)](https://github.com/marcospontoexe/Javascript/blob/main/imagens/5.jpeg) 
 
 **Estrutura:**
 
@@ -473,6 +493,53 @@ document.addEventListener('DOMContentLoaded', function() {
   console.log('O DOM foi completamente carregado e analisado.');
   // Inserimos aqui nosso código JavaScript que manipula elementos do DOM
 });
+```
+
+_Exemplo completo:_
+
+```js
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemplo de Eventos com JavaScript</title>
+</head>
+<body>
+
+    <h2>Exemplo de Múltiplos Eventos com JavaScript</h2>
+
+    <button id="botaoClique">Clique em mim</button>
+    <button id="botaoHover">Passe o mouse sobre mim</button>
+    <p id="mensagemClique"></p>
+    <p id="mensagemHover"></p>
+
+    <script>
+    //Adiciona evento de carregamento de página ao documento
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        // Atribuindo evento de clique ao primeiro botão
+        const botaoClique = document.getElementById('botaoClique');
+        botaoClique.addEventListener('click', function() {
+            const mensagemClique = document.getElementById('mensagemClique');
+            mensagemClique.innerHTML = 'O botão de clique foi clicado!';
+        });
+
+        // Atribuindo evento de mouseover ao segundo botão
+        const botaoHover = document.getElementById('botaoHover');
+        botaoHover.addEventListener('mouseover', function() {
+            const mensagemHover = document.getElementById('mensagemHover');
+            mensagemHover.innerHTML = 'Você passou o mouse sobre o botão!';
+        });
+
+        // Atribuindo evento de mouseout ao segundo botão
+        botaoHover.addEventListener('mouseout', function() {
+            const mensagemHover = document.getElementById('mensagemHover');
+            mensagemHover.innerHTML = 'Você tirou o mouse do botão!';
+        });
+        
+    });
+    </script>
+</body>
+</html>
 ```
 
 **Explicação do Exemplo:**
