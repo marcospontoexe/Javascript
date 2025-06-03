@@ -547,51 +547,15 @@ _Exemplo completo:_
 2. **`addEventListener` para Clique:** Adiciona um manipulador de evento `click` a um botão com `id="meuBotao"`, que atualiza o conteúdo do parágrafo `mensagemClique` quando o botão é clicado.
 3. **`addEventListener` para Mouseover:** Adiciona um manipulador de evento `mouseover` ao segundo botão, que atualiza o conteúdo do parágrafo `mensagemHover` quando o mouse passa sobre o botão.
 4. **`addEventListener` para Mouseout:** Adiciona um manipulador de evento `mouseout` ao segundo botão, que atualiza o conteúdo do parágrafo `mensagemHover` quando o mouse sai do botão.
+ 
+#### Resultado Esperado
+Ao clicar no botão "Clique em mim", o parágrafo mensagemClique exibirá "O botão de clique
+foi clicado!".
+Ao passar o mouse sobre o botão "Passe o mouse sobre mim", o parágrafo mensagemHover
+exibirá "Você passou o mouse sobre o botão!".
+Ao tirar o mouse do botão "Passe o mouse sobre mim", o parágrafo mensagemHover exibirá
+"Você tirou o mouse do botão!".
 
----
-
-#### Exemplo Completo de Eventos em JavaScript
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Exemplo de Eventos com JavaScript</title>
-</head>
-<body>
-
-  <h2>Exemplo de Múltiplos Eventos com JavaScript</h2>
-
-  <button id="botaoClique">Clique em mim</button>
-  <button id="botaoHover">Passe o mouse sobre mim</button>
-  <p id="mensagemClique"></p>
-  <p id="mensagemHover"></p>
-
-  <script>
-    // Adiciona evento de carregamento de página ao documento
-    document.addEventListener('DOMContentLoaded', function() {
-      // Atribuindo evento de clique ao primeiro botão
-      document.getElementById('botaoClique').addEventListener('click', function() {
-        document.getElementById('mensagemClique').textContent = 'O botão de clique foi clicado!';
-      });
-
-      // Atribuindo evento de mouseover ao segundo botão
-      document.getElementById('botaoHover').addEventListener('mouseover', function() {
-        document.getElementById('mensagemHover').textContent = 'Você passou o mouse sobre o botão!';
-      });
-
-      // Atribuindo evento de mouseout ao segundo botão
-      document.getElementById('botaoHover').addEventListener('mouseout', function() {
-        document.getElementById('mensagemHover').textContent = 'Você tirou o mouse do botão!';
-      });
-    });
-  </script>
-
-</body>
-</html>
-```
-
----
 
 > **SAIBA MAIS**  
 > Praticando comandos no JavaScript:  
