@@ -126,19 +126,14 @@ Neste exemplo fizemos a definição do evento de `click` do botão diretamente e
 > - Usamos o caractere reservado `"` dentro de uma string com ajuda da barra invertida `"`, como no exemplo: `"A variável "nom" é uma "`. Nesse caso, queremos que as aspas duplas apareçam no texto, e não sejam confundidas com delimitadores de string.  
 > - Chamamos o código da função com o acionamento do elemento HTML `<button>`, indicando no seu evento `onclick="myFunction()"`.
 
-![Figura 2: Entrada de dados com JavaScript](sandbox:/mnt/data/image_page3_1.jpeg)  
-<!-- #ParaTodosVerem -->
-
----
-
-## Fundamentos do JavaScript
+![Figura 2: Entrada de dados com JavaScript](https://github.com/marcospontoexe/Javascript/blob/main/imagens/3.jpeg)  
 
 Vamos detalhar mais alguns exemplos de JavaScript, para compreender melhor os seus recursos.  
 Para isso, primeiramente, precisamos conhecer alguns fundamentos do JavaScript, para então utilizá-los.
 
 ---
 
-### 1. Criando variáveis para o JavaScript
+### Criando variáveis para o JavaScript
 
 #### Palavras Reservadas para Variáveis
 
@@ -154,6 +149,10 @@ Em JavaScript, utilizamos `let` e `const` para declarar variáveis.
 
 > **Notas sobre `var`**  
 > Embora ainda suportado, `var` não é recomendado em código moderno por causa de seu comportamento de escopo de função, o que pode levar a bugs difíceis de rastrear. Preferimos `let` e `const` por sua clareza e segurança.
+
+```html
+var variavelGlobal = 'Var tem escopo de função ou global'; 
+```
 
 ##### Exemplos:
 
