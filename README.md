@@ -142,8 +142,24 @@ Em JavaScript, utilizamos `let` e `const` para declarar variáveis.
 - **`let`**: Utilizada para declarar variáveis que podem ter seu valor alterado posteriormente.  
   O escopo de uma variável declarada com `let` é limitado ao bloco onde ela é definida.
 
+```js
+let meuNome;          // Declara a variável
+meuNome = 'Pedro';    // Atribui valor à variável
+
+let idade = 27;       // Declara e atribui valor à variável
+```
+
 - **`const`**: Utilizada para declarar constantes, ou seja, valores que não podem ser alterados após a atribuição inicial.  
   Assim como `let`, `const` também tem escopo de bloco.
+
+```js
+const a = 5;
+const b = 6;          // Valores de 'a' e 'b' não poderão ser alterados
+
+let soma = a + b;     // soma é 11, mas poderá ser alterada
+
+var variavelGlobal = 'Var tem escopo de função ou global';
+```
 
 - **`let` e `const`**: Essas palavras reservadas foram adicionadas ao padrão JavaScript em 2015 (ES6) e oferecem uma forma mais segura e robusta de declarar variáveis comparadas ao `var`.
 
@@ -154,25 +170,10 @@ Em JavaScript, utilizamos `let` e `const` para declarar variáveis.
 var variavelGlobal = 'Var tem escopo de função ou global'; 
 ```
 
-##### Exemplos:
+#### Compatibilidade de Navegadores
 
-```js
-let meuNome;          // Declara a variável
-meuNome = 'Pedro';    // Atribui valor à variável
-
-let idade = 27;       // Declara e atribui valor à variável
-
-const a = 5;
-const b = 6;          // Valores de 'a' e 'b' não poderão ser alterados
-
-let soma = a + b;     // soma é 11, mas poderá ser alterada
-
-var variavelGlobal = 'Var tem escopo de função ou global';
-```
-
-> **SAIBA MAIS**  
-> A maioria dos navegadores modernos suporta `let` e `const`, portanto iremos adotá-los em detrimento ao `var`. Utilizar `let` e `const` melhora a legibilidade, manutenção e segurança do código, alinhando-o com as melhores práticas recomendadas no desenvolvimento moderno em JavaScript.  
->  
+A maioria dos navegadores modernos suporta `let` e `const`, portanto iremos adotá-los em detrimento ao `var`. Utilizar `let` e `const` melhora a legibilidade, manutenção e segurança do código, alinhando-o com as melhores práticas recomendadas no desenvolvimento moderno em JavaScript. 
+ 
 > Links úteis:  
 > - [https://www.w3schools.com/js/js_variables.asp](https://www.w3schools.com/js/js_variables.asp)  
 > - [https://www.w3schools.com/js/js_let.asp](https://www.w3schools.com/js/js_let.asp)  
@@ -181,7 +182,7 @@ var variavelGlobal = 'Var tem escopo de função ou global';
 
 ---
 
-### 2. Números e operadores
+### Números e operadores
 
 #### Utilizando Números
 
