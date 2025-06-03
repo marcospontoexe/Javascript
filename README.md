@@ -188,8 +188,16 @@ A maioria dos navegadores modernos suporta `let` e `const`, portanto iremos adot
 
 Experimente declarar os comandos a seguir no console da janela de inspeção do navegador:
 
+```js
+let A = 10; // Declara variável inteira
+let B = 7.89 ;   // Declara variável com ponto flutuante
+typeof A;        // Retorna o tipo de dados da variável = number
+typeof B; // Retorna o tipo de dados da variável = number
+```
+
 - Valores numéricos são tratados como `number`, o que facilita o tratamento de valores numéricos.  
-- Com valores numericos podemos realizar as operações aritméticas:
+
+Com valores numericos podemos realizar as operações aritméticas:
 
 | Operador | Descrição         | Exemplo           | Resultado |
 |----------|-------------------|-------------------|-----------|
@@ -202,12 +210,6 @@ Experimente declarar os comandos a seguir no console da janela de inspeção do 
 | `++`     | Incremento (+1)   | `x = 3; x++; x`   | `4`       |
 | `--`     | Decremento (-1)   | `x = 3; x--; x`   | `2`       |
 
-```js
-let A = 10;        // Declara variável inteira
-let B = 7.89;      // Declara variável com ponto flutuante
-typeof A;          // Retorna o tipo de dados da variável = number
-typeof B;          // Retorna o tipo de dados da variável = number
-```
 
 > **SAIBA MAIS**  
 > Links úteis sobre operadores:  
