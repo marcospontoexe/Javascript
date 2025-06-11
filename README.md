@@ -344,7 +344,7 @@ let frutas = ['Abacate', 'Uva', 'Limão'];
 
 Uma das maneiras mais comuns para percorrer e acessar cada um dos elementos de um array é com um laço de repetição do tipo `for`:
 
-```js
+```html
 <!DOCTYPE html>
 <html>
 <body>
@@ -353,22 +353,21 @@ Uma das maneiras mais comuns para percorrer e acessar cada um dos elementos de u
 <p id="texto2"></p>
 <p id="texto3"></p>
 <script>
-var frutas = ['Abacate', 'Uva', 'Limão'];
-var minhaFruta = frutas[1];   // Uva
-var fTam = frutas.length;     // Informa o total de elementos no array
-document.getElementById("texto1").innerHTML = 'Minha fruta = ' + minhaFruta;
-document.getElementById("texto2").innerHTML = 'Total de frutas = ' + fTam;
+  var frutas = ['Abacate', 'Uva', 'Limão'];
+  var minhaFruta = frutas[1];   // Uva
+  var fTam = frutas.length;     // Informa o total de elementos no array
+  document.getElementById("texto1").innerHTML = 'Minha fruta = ' + minhaFruta;
+  document.getElementById("texto2").innerHTML = 'Total de frutas = ' + fTam;
 
-var text = "<ul>";
-for (let i = 0; i < fTam; i++) {          // For que percorre o array e
-  text += "<li>" + frutas[i] + "</li>";   // monta o HTML de lista
-}
-text += "</ul>";                                    // finaliza o HTML de lista
-document.getElementById("texto3").innerHTML = text; // Mostra lista de frutas
+  var text = "<ul>";
+  for (let i = 0; i < fTam; i++) {          // For que percorre o array e
+    text += "<li>" + frutas[i] + "</li>";   // monta o HTML de lista
+  }
+  text += "</ul>";                                    // finaliza o HTML de lista
+  document.getElementById("texto3").innerHTML = text; // Mostra lista de frutas
 </script>
 </body>
 </html>
-
 ```
 
 ![Figura)](https://github.com/marcospontoexe/Javascript/blob/main/imagens/4.jpeg) 
@@ -376,36 +375,6 @@ document.getElementById("texto3").innerHTML = text; // Mostra lista de frutas
 > **SAIBA MAIS**  
 > - [https://www.w3schools.com/js/js_arrays.asp](https://www.w3schools.com/js/js_arrays.asp)  
 > - [https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array)
-
-#### Exemplo prático em HTML com JavaScript
-
-```html
-<!DOCTYPE html>
-<html>
-<body>
-  <h2>JavaScript Arrays</h2>
-  <p id="texto1"></p>
-  <p id="texto2"></p>
-  <p id="texto3"></p>
-
-  <script>
-    var frutas = ['Abacate', 'Uva', 'Limão'];
-    var minhaFruta = frutas[1];   // Uva
-    var fTam = frutas.length;     // Informa o total de elementos no array
-
-    document.getElementById("texto1").innerHTML = 'Minha fruta = ' + minhaFruta;
-    document.getElementById("texto2").innerHTML = 'Total de frutas = ' + fTam;
-
-    var text = "<ul>";
-    for (let i = 0; i < fTam; i++) {
-      text += "<li>" + frutas[i] + "</li>";
-    }
-    text += "</ul>";
-    document.getElementById("texto3").innerHTML = text;
-  </script>
-</body>
-</html>
-```
 
 ---
 
