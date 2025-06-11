@@ -75,6 +75,8 @@ Colocar scripts na parte inferior do elemento `<body>` geralmente permite que to
 
 Neste exemplo fizemos a definição do evento de `click` do botão diretamente em um atributo HTML chamado `onclick`. Apesar de ser a maneira mais fácil de realizar a chamada do evento, **não é uma boa prática**. Vamos utilizar esta abordagem nos primeiros exemplos, mas na sequência iremos verificar qual é a maneira recomendada de atribuição de eventos em JavaScript.
 
+[Veja um exemplo](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/03-botao).
+
 ---
 
 ## JavaScript – Visão geral
@@ -134,6 +136,7 @@ Para isso, primeiramente, precisamos conhecer alguns fundamentos do JavaScript, 
 ---
 
 ### Criando variáveis para o JavaScript
+[Veja um exemplo](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/01-variaveis).
 
 #### Palavras Reservadas para Variáveis
 
@@ -183,6 +186,7 @@ A maioria dos navegadores modernos suporta `let` e `const`, portanto iremos adot
 ---
 
 ### Números e operadores
+[Veja um exemplo](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/02-operadores).
 
 #### Utilizando Números
 
@@ -243,6 +247,8 @@ Com valores numericos podemos realizar as operações aritméticas:
 ---
 
 ### Condicional no JavaScript
+
+[Veja um exemplo](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/06-condi%C3%A7%C3%B5es).
 
 **Condicional**  
 Permite tomada de decisão. A estrutura mais simples está apresentada a seguir:
@@ -326,10 +332,10 @@ while (i < 5) {
 
 ---
 
-### Array no JavaScript
-
-**Array**  
+### Array no JavaScript 
 Variável estruturada que mantém elementos que possuem características em comum, de forma ordenada:
+
+[Veja um exemplo](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/08-variaveis_compostas(array)/01-array).
 
 ```js
 let frutas = ['Abacate', 'Uva', 'Limão'];
@@ -407,6 +413,9 @@ document.getElementById("texto3").innerHTML = text; // Mostra lista de frutas
 O **Document Object Model (DOM)** é a representação dos objetos que compõem a estrutura e o conteúdo de um documento na Web. Com base nessa estrutura de árvore de objetos, o JavaScript consegue acessar e alterar todos os elementos em um documento HTML.
 
 ![Figura 3: Document Object Model (DOM))](https://github.com/marcospontoexe/Javascript/blob/main/imagens/5.jpeg) 
+
+* [Veja um exemplo](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/04-DOM).
+* [Exemplo usando eventos](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/05-eventos).
 
 **Estrutura:**
 
@@ -873,3 +882,6 @@ O uso de um botão HTML (`<button>`) permite chamar um trecho em JavaScript que 
 ![Figura 8: Ocultar ou exibir elemento HTML com JavaScript](https://github.com/marcospontoexe/Javascript/blob/main/imagens/9.jpeg)  
 
 ---
+
+* [VEja exeplos usando funções](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/09-funcoes).
+* [Veja exemplo usando objetos](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/10-objeto).
