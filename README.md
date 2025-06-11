@@ -237,10 +237,9 @@ Com valores numericos podemos realizar as operações aritméticas:
 
 | Operador | Descrição         | Exemplo            | Resultado |
 |----------|-------------------|--------------------|-----------|
-| `==`     | Igualdade de valores  | `5 == "3"`        | `true`    |
+| `==`     | Igualdade de valores  | `5 == "5"`        | `true`    |
+| `===`    | Igualdade de tipo e valor (igaudade restrita)            | `5 == "5"`       | `false`    |
 | `!=`     | Diferente         | `5 !== 2 + 3`      | `false`   |
-| `===`    | Igualdade de tipo e valor             | `5 == "3"`       | `false`    |
-| `!==`    | Diferente         | `5 !== 2 + 3`      | `false`   |
 | `<`      | Menor             | `5 < 10`           | `true`    |
 | `>`      | Maior             | `5 > 10`           | `false`   |
 | `<=`     | Menor ou igual    | `5 <= 5 + 3`       | `true`    |
