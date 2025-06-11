@@ -382,7 +382,7 @@ Uma das maneiras mais comuns para percorrer e acessar cada um dos elementos de u
 
 O **Document Object Model (DOM)** é a representação dos objetos que compõem a estrutura e o conteúdo de um documento na Web. Com base nessa estrutura de árvore de objetos, o JavaScript consegue acessar e alterar todos os elementos em um documento HTML.
 
-![Figura 3: Document Object Model (DOM))](https://github.com/marcospontoexe/Javascript/blob/main/imagens/5.jpeg) 
+![Figura 3: Document Object Model (DOM))](https://github.com/marcospontoexe/Javascript/blob/main/imagens/5.jpg) 
 
 * [Veja um exemplo](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/04-DOM).
 * [Exemplo usando eventos](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/05-eventos).
