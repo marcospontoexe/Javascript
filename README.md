@@ -385,7 +385,6 @@ O **Document Object Model (DOM)** é a representação dos objetos que compõem 
 ![Figura 3: Document Object Model (DOM))](https://github.com/marcospontoexe/Javascript/blob/main/imagens/5.jpg) 
 
 * [Veja um exemplo](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/04-DOM).
-* [Exemplo usando eventos](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/05-eventos).
 
 **Estrutura:**
 
@@ -422,6 +421,8 @@ Para realizar alguma operação em um elemento HTML, precisamos encontrar esse e
 ## Atribuindo eventos JavaScript aos elementos do DOM corretamente
 
 Para manipular eventos de forma moderna e seguindo as melhores práticas, utilizamos o método `addEventListener` para associar eventos aos elementos do DOM (ao invés de utilizar atributos HTML diretamente nos elementos). Além disso, garantimos que nossa interação com os elementos da página aconteça somente após o carregamento completo do DOM utilizando o evento `DOMContentLoaded`.
+
+* [Exemplo usando eventos](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/05-eventos).
 
 ### Principais eventos JavaScript
 
@@ -475,7 +476,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 _Exemplo completo:_
 
-```js
+```html
 <!DOCTYPE html>
 <html>
 <head>
