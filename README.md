@@ -61,7 +61,7 @@ Clique em mim para apresentar a data e hora atuais.</button>
 > **Observe no código HTML:**  
 > - O elemento HTML `<button>` possui um evento `onclick`, que ocorre quando o usuário clica no botão.  
 > - Neste momento, o JavaScript é acionado e altera o elemento HTML com `id="textoDataHora"`, que neste caso é um parágrafo (`<p>`).  
-> - A propriedade `innerHTML` define, ou retorna, o conteúdo HTML (ou HTML interno) de um elemento.  
+> - A propriedade `innerHTML` define, ou retorna, o conteúdo HTML (ou HTML interno) de um elemento, incluindo texto e tags.  
 > - O método JavaScript `Date()` retorna a data e a hora atuais.  
 > - Como o elemento `<p>` está após o elemento `<button>`, o texto com a data e hora atuais aparece após o botão, como indicado na figura deste exemplo.
 
@@ -409,6 +409,7 @@ Para realizar alguma operação em um elemento HTML, precisamos encontrar esse e
 
 - `document.getElementsByClassName('class')`  
   Seleciona os elementos com base no nome de classe. Retorna uma coleção (tipo array) de elementos que tenham a mesma classe.
+  É possível selecionar apenas um dos objetos: `document.getElementsByClassName('class')[0]`
 
 - `document.querySelector('seletor')`  
   Seleciona um único elemento, o _primeiro_ que satisfaz seu parâmetro, que pode ser um `id`, um nome de classe ou mesmo uma tag HTML. Exemplo: `document.querySelector('#meuId')` ou `document.querySelector('.minhaClasse p')`.
