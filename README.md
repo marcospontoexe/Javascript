@@ -1,4 +1,54 @@
 # JavaScript
+
+Repositório dos meus estudos de JavaScript no navegador (client-side). Aqui estão os projetos e exercícios que desenvolvi em três cursos, os exemplos de cada tópico estudado e uma apostila com a teoria (mais abaixo).
+
+**Tecnologias:** HTML5, CSS3, JavaScript (ES6+), DOM, BOM e Bootstrap 4.
+
+## Cursos
+
+| Curso | Plataforma | Material neste repositório |
+|-------|------------|----------------------------|
+| [Curso de JavaScript e ECMAScript para Iniciantes](https://www.youtube.com/playlist?list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1) | Curso em Vídeo (YouTube) | [curso em vídeo](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo) |
+| [Desenvolvedor Web Completo](https://www.udemy.com/course/curso-desenvolvedor-web-completo/) | Udemy | [Desenvolvedor web completo](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/Udemy/Desenvolvedor%20web%20completo) |
+| [Desenvolvimento Web Completo](https://www.udemy.com/course/web-completo/) | Udemy | [Desenvolvimento Web Completo 2022](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/Udemy/Desenvolvimento%20Web%20Completo%202022) |
+
+## Projetos
+
+### Mata Mosquito
+
+<img src="https://github.com/marcospontoexe/Javascript/blob/main/material%20did%C3%A1tico/Udemy/Desenvolvimento%20Web%20Completo%202022/PROJETOS/01-mata-mosca/imagens/game.png?raw=true" alt="Logotipo do jogo Mata Mosquito" width="180">
+
+Jogo em que o jogador clica nos mosquitos que aparecem na tela antes que eles sumam. Cada mosquito que escapa esvazia um dos corações de vida; quem resistir até o fim do cronômetro de 15 segundos vence.
+
+- Três níveis de dificuldade (Normal, Difícil e Chuck Norris), que mudam o intervalo entre os mosquitos (1,5 s, 1 s e 0,75 s). O nível escolhido chega à página do jogo pela query string da URL.
+- Cada mosquito surge com posição, tamanho e direção aleatórios, dentro de uma área que acompanha o tamanho da janela.
+- Conceitos praticados: `setInterval`/`clearInterval`, `Math.random`, criação e remoção de elementos com o DOM, navegação entre páginas com `window.location` e layout com Bootstrap 4.
+- [Código-fonte](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/Udemy/Desenvolvimento%20Web%20Completo%202022/PROJETOS/01-mata-mosca). Para jogar, abra o `index.html`.
+
+### Exercícios (Curso em Vídeo)
+
+| Exercício | O que faz | Conceitos praticados |
+|-----------|-----------|----------------------|
+| [Hora do dia](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/EXERC%C3%8DCIOS/01-horas) | Lê a hora do sistema ao abrir a página e mostra "Bom dia", "Boa tarde" ou "Boa noite", com imagem e cor de fundo de acordo com o período. | `Date`, `if/else`, estilos alterados pelo DOM |
+| [Verificador de idade](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/EXERC%C3%8DCIOS/02-idade) | Calcula a idade a partir do ano de nascimento e mostra uma foto da faixa etária (bebê, criança, adolescente, jovem, adulto ou idoso) de acordo com o sexo escolhido. | Validação de entrada, `if/else` encadeado, criação de `<img>` pelo DOM |
+| [Contador](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/EXERC%C3%8DCIOS/03-contador) | Conta de um número inicial até um final, com o passo informado pelo usuário. | Laço `for`, validação de entrada, emojis com `\u{...}` |
+| [Tabuada](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/EXERC%C3%8DCIOS/04-tabuada) | Gera a tabuada de 0 a 10 do número digitado dentro de uma lista. | Laço `for`, `createElement` e `appendChild` |
+| [Analisador de números](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/EXERC%C3%8DCIOS/05-funcao%2Barray) | Guarda números de 1 a 100 sem repetição e, ao concluir, mostra quantidade, maior, menor, soma e média. | Arrays (`push`, `indexOf`), funções, laço `for...in` |
+
+### Exemplos por tópico
+
+- **Curso em Vídeo:** [variáveis](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/01-variaveis), [operadores](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/02-operadores), [botão](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/03-botao), [DOM](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/04-DOM), [eventos](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/05-eventos) (lâmpada, menu e soma de valores), [condições](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/06-condi%C3%A7%C3%B5es) (`if` e `switch`), [arrays](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/08-variaveis_compostas(array)/01-array), [funções](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/09-funcoes) e [objetos](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/10-objeto).
+- **Udemy – Desenvolvedor Web Completo:** objetos nativos [`Math`](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/Udemy/Desenvolvedor%20web%20completo/01-math), [`String`](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/Udemy/Desenvolvedor%20web%20completo/02-string) e [`Date`](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/Udemy/Desenvolvedor%20web%20completo/03-date), e [objetos literais](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/Udemy/Desenvolvedor%20web%20completo/04-objeto).
+- **Udemy – Desenvolvimento Web Completo:** [funções](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/Udemy/Desenvolvimento%20Web%20Completo%202022/01-funcoes) (anônimas, callback, strings, datas e parâmetros variáveis), [eventos](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/Udemy/Desenvolvimento%20Web%20Completo%202022/02-eventos) (teclado, janela e formulário), [estilos pelo DOM](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/Udemy/Desenvolvimento%20Web%20Completo%202022/03-DOM), [tratamento de erros](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/Udemy/Desenvolvimento%20Web%20Completo%202022/04-tratamento%20de%20erro) e [BOM](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/Udemy/Desenvolvimento%20Web%20Completo%202022/05-BOM) (`window`, `screen`, `location` e temporizadores).
+
+## Como executar
+
+Não há dependências nem etapa de build. Clone o repositório e abra no navegador o arquivo `.html` do exemplo ou projeto.
+
+---
+
+## Apostila de JavaScript
+
 Agora trabalharemos com uma linguagem de programação que será processada no navegador, o
 ambiente que nos permite interagir com o cliente da aplicação web.
 
@@ -238,8 +288,8 @@ Com valores numericos podemos realizar as operações aritméticas:
 | Operador | Descrição         | Exemplo            | Resultado |
 |----------|-------------------|--------------------|-----------|
 | `==`     | Igualdade de valores  | `5 == "5"`        | `true`    |
-| `===`    | Igualdade de tipo e valor (igaudade restrita)            | `5 == "5"`       | `false`    |
-| `!=`     | Diferente         | `5 !== 2 + 3`      | `false`   |
+| `===`    | Igualdade de tipo e valor (igualdade restrita)            | `5 === "5"`       | `false`    |
+| `!=`     | Diferente         | `5 != 2 + 3`      | `false`   |
 | `<`      | Menor             | `5 < 10`           | `true`    |
 | `>`      | Maior             | `5 > 10`           | `false`   |
 | `<=`     | Menor ou igual    | `5 <= 5 + 3`       | `true`    |
@@ -851,9 +901,9 @@ O uso de um botão HTML (`<button>`) permite chamar um trecho em JavaScript que 
 </html>
 ```
 
-![Figura 8: Ocultar ou exibir elemento HTML com JavaScript](https://github.com/marcospontoexe/Javascript/blob/main/imagens/9.jpeg)  
+![Figura 8: Ocultar ou exibir elemento HTML com JavaScript](https://github.com/marcospontoexe/Javascript/blob/main/imagens/10.jpeg)  
 
 ---
 
-* [VEja exeplos usando funções](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/09-funcoes).
+* [Veja exemplos usando funções](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/09-funcoes).
 * [Veja exemplo usando objetos](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/10-objeto).
