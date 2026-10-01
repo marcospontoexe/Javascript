@@ -23,7 +23,7 @@ function contador(){
             }
         }
         else{                                           //contagem regressiva
-            for(var c = Number(inicio.value); c <= Number(fim.value); c-=Number(contador.value)){
+            for(var c = Number(inicio.value); c >= Number(fim.value); c-=Number(contador.value)){   // na contagem regressiva o laço continua enquanto 'c' for maior ou igual ao fim
                 msg.innerHTML += `\u{1F449} ${c} `        // U+1F601 é a formatação original, para para html
             }
         }
