@@ -14,7 +14,7 @@ Repositório pessoal de estudo de JavaScript no navegador (client-side), em port
 ## Estrutura
 
 - [README.md](README.md): tem duas partes. A primeira é a vitrine do repositório (cursos, projetos, exercícios e exemplos por tópico), que será reaproveitada num portfólio futuro; ao criar um projeto ou exercício novo, acrescente-o nas seções "Projetos" / "Exercícios" com descrição e conceitos praticados. A segunda é a "Apostila de JavaScript" (teoria de JS, DOM e eventos). Os links para exemplos e imagens usam **URLs absolutas do GitHub** (`https://github.com/marcospontoexe/Javascript/tree/main/...` e `.../blob/main/imagens/N.jpeg`) com o caminho em percent-encoding (`material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/...`). Ao adicionar um link novo, siga o mesmo formato, porque links relativos quebram esse padrão.
-- [imagens/](imagens/): figuras do README, numeradas `1.jpeg`…`10.jpeg` (a `5` é `.jpg`).
+- [imagens/](imagens/): figuras da apostila no README, numeradas `1.jpeg`…`10.jpeg` (a `5` é `.jpg`); em `imagens/capturas/` ficam as capturas usadas no site do GitHub Pages.
 - [material didático/](<material didático/>): exemplos organizados por curso de origem:
   - `curso em vídeo/`: [Curso de JavaScript e ECMAScript para Iniciantes](https://www.youtube.com/playlist?list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1). Pastas numeradas por tópico (`NN-tópico/`), mais `EXERCÍCIOS/`, onde cada exercício segue o trio `index.html` + `script.js` + `style.css`, com o script carregado no fim do `<body>`.
   - `Udemy/Desenvolvedor web completo/`: curso [Desenvolvedor Web Completo](https://www.udemy.com/course/curso-desenvolvedor-web-completo/).
@@ -27,6 +27,14 @@ Repositório pessoal de estudo de JavaScript no navegador (client-side), em port
 Em `Udemy/Desenvolvimento Web Completo 2022/PROJETOS/01-mata-mosca/`, o fluxo é `index.html` → `app.html?<nivel>` → `vitoria.html` ou `fim_de_jogo.html`.
 - O nível (`normal`, `dificil`, `chucknorris`) viaja na query string e é lido em `jogo.js` via `window.location.search`. Por isso o jogo tem de ser iniciado por `index.html`.
 - `jogo.js` é carregado no `<head>` de `app.html` e define variáveis globais (`tempo`, `criaMosquitoTempo`, `vidas`) que o `<script>` inline no fim do `<body>` de `app.html` usa. Mudanças nesses nomes afetam os dois arquivos.
+
+## GitHub Pages (portfólio)
+
+- O site é publicado pelo GitHub Pages a partir da branch `main`, pasta raiz: https://marcospontoexe.github.io/Javascript/. A página inicial é o [index.html](index.html) da raiz (HTML e CSS puros, sem JS); o [.nojekyll](.nojekyll) faz o Pages servir os arquivos como estão, sem passar pelo Jekyll.
+- Ao criar um projeto ou exercício, acrescente-o também no `index.html` (cartão com captura em [imagens/capturas/](imagens/capturas/), JPEG 800×500), além do README.
+- Os links do `index.html` são **relativos** e em percent-encoding (`material%20did%C3%A1tico/...`, `05-funcao%2Barray`), para funcionarem tanto no Pages como abrindo o arquivo localmente.
+- O Pages diferencia maiúsculas de minúsculas e o Windows não: os nomes usados em `src`, `href` e `url()` têm de ser idênticos aos nomes dos arquivos, senão funcionam localmente e quebram no site.
+- Capturas de tela: Chrome headless (`chrome.exe --headless=new --window-size=1280,800 --screenshot=<saida.png> <url file:///...>`, com `--virtual-time-budget=<ms>` para deixar timers rodarem). Para mostrar um exercício já preenchido, use uma cópia da pasta no scratchpad com um `<script>` que preenche os campos e chama a função; não altere os arquivos do repositório para isso.
 
 ## Convenções
 
