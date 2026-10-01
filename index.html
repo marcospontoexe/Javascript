@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | Projetos e exercícios</title>
+    <meta name="description" content="Projetos e exercícios em JavaScript, HTML5 e CSS3 desenvolvidos durante cursos: o jogo Mata Mosquito, tabuada, contador, verificador de idade e mais.">
+
+    <!-- Informações usadas quando o link é compartilhado (LinkedIn, WhatsApp etc.) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="JavaScript | Projetos e exercícios">
+    <meta property="og:description" content="Projetos e exercícios em JavaScript, HTML5 e CSS3 que rodam direto no navegador.">
+    <meta property="og:image" content="https://marcospontoexe.github.io/Javascript/imagens/capturas/mata-mosquito.jpg">
+
+    <style>
+        /* Cores em variáveis para trocar tudo de uma vez no modo escuro */
+        :root {
+            --fundo: #f6f5f1;
+            --superficie: #ffffff;
+            --texto: #1d1d1f;
+            --texto-suave: #5b5b63;
+            --borda: #e3e1da;
+            --destaque: #f7df1e;          /* amarelo do logotipo do JavaScript */
+            --destaque-texto: #1d1d1f;
+            --link: #2449b8;
+            --sombra: 0 1px 2px rgba(0, 0, 0, 0.06), 0 8px 24px rgba(0, 0, 0, 0.06);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --fundo: #141417;
+                --superficie: #1e1e23;
+                --texto: #ececf1;
+                --texto-suave: #a3a3ad;
+                --borda: #2e2e35;
+                --link: #8fb0ff;
+                --sombra: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.3);
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--fundo);
+            color: var(--texto);
+            font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+        }
+
+        a {
+            color: var(--link);
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Largura máxima do conteúdo, com margem lateral no celular */
+        .conteudo {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        /* ---------- Topo ---------- */
+        .topo {
+            padding: 64px 0 40px;
+            border-bottom: 1px solid var(--borda);
+        }
+
+        .sobretitulo {
+            margin: 0 0 8px;
+            color: var(--texto-suave);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin: 0 0 16px;
+            font-size: clamp(2rem, 5vw, 3rem);
+            line-height: 1.1;
+        }
+
+        /* Sublinhado amarelo no título, desenhado com um gradiente */
+        h1 span {
+            background: linear-gradient(transparent 62%, var(--destaque) 62%);
+        }
+
+        .resumo {
+            max-width: 640px;
+            margin: 0 0 24px;
+            color: var(--texto-suave);
+            font-size: 1.1rem;
+        }
+
+        /* ---------- Etiquetas de tecnologias ---------- */
+        .etiquetas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 0 0 24px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .etiquetas li {
+            padding: 2px 10px;
+            border: 1px solid var(--borda);
+            border-radius: 999px;
+            background: var(--superficie);
+            font-size: 0.85rem;
+        }
+
+        .etiquetas.pequenas {
+            margin-bottom: 16px;
+        }
+
+        .etiquetas.pequenas li {
+            font-size: 0.78rem;
+            font-family: ui-monospace, Consolas, monospace;
+        }
+
+        /* ---------- Botões ---------- */
+        .acoes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: auto;          /* empurra os botões para o fim do cartão */
+        }
+
+        .botao {
+            display: inline-block;
+            padding: 8px 18px;
+            border: 1px solid var(--destaque);
+            border-radius: 8px;
+            background: var(--destaque);
+            color: var(--destaque-texto);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .botao.secundario {
+            border-color: var(--borda);
+            background: transparent;
+            color: var(--texto);
+        }
+
+        .botao:hover,
+        .botao:focus-visible {
+            filter: brightness(0.95);
+            text-decoration: underline;
+        }
+
+        /* ---------- Seções ---------- */
+        main section {
+            padding: 48px 0 8px;
+        }
+
+        h2 {
+            margin: 0 0 8px;
+            font-size: 1.6rem;
+        }
+
+        .secao-resumo {
+            margin: 0 0 24px;
+            color: var(--texto-suave);
+        }
+
+        /* ---------- Cartões ---------- */
+        .cartao {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid var(--borda);
+            border-radius: 12px;
+            background: var(--superficie);
+            box-shadow: var(--sombra);
+        }
+
+        .cartao img {
+            width: 100%;
+            aspect-ratio: 16 / 10;
+            object-fit: cover;
+            border-bottom: 1px solid var(--borda);
+        }
+
+        .cartao-texto {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .cartao h3 {
+            margin: 0 0 8px;
+            font-size: 1.2rem;
+        }
+
+        .cartao p {
+            margin: 0 0 16px;
+            color: var(--texto-suave);
+        }
+
+        /* O projeto em destaque fica com a imagem ao lado do texto em telas largas */
+        @media (min-width: 760px) {
+            .cartao.destaque {
+                flex-direction: row;
+            }
+
+            .cartao.destaque img {
+                width: 58%;
+                border-bottom: none;
+                border-right: 1px solid var(--borda);
+            }
+
+            .cartao.destaque .cartao-texto {
+                padding: 32px;
+            }
+
+            .cartao.destaque h3 {
+                font-size: 1.6rem;
+            }
+        }
+
+        /* Grade que se adapta: quantas colunas de 280px couberem */
+        .grade {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        /* ---------- Exemplos por tópico ---------- */
+        .colunas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .colunas > div {
+            padding: 20px;
+            border: 1px solid var(--borda);
+            border-radius: 12px;
+            background: var(--superficie);
+        }
+
+        .colunas h3 {
+            margin: 0 0 12px;
+            font-size: 1rem;
+        }
+
+        .lista-links {
+            margin: 0;
+            padding-left: 18px;
+        }
+
+        .lista-links li {
+            margin-bottom: 4px;
+        }
+
+        /* ---------- Rodapé ---------- */
+        footer {
+            margin-top: 56px;
+            padding: 32px 0 48px;
+            border-top: 1px solid var(--borda);
+            color: var(--texto-suave);
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin: 0 0 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="topo">
+        <div class="conteudo">
+            <p class="sobretitulo">Portfólio de estudos</p>
+            <h1><span>JavaScript</span> no navegador</h1>
+            <p class="resumo">
+                Projetos e exercícios que desenvolvi em três cursos de JavaScript, usando HTML5 e CSS3.
+                Tudo roda direto no navegador: escolha um item e experimente.
+            </p>
+            <ul class="etiquetas">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript (ES6+)</li>
+                <li>DOM</li>
+                <li>BOM</li>
+                <li>Bootstrap 4</li>
+            </ul>
+            <a class="botao secundario" href="https://github.com/marcospontoexe/Javascript" target="_blank" rel="noopener">Ver o repositório no GitHub</a>
+        </div>
+    </header>
+
+    <main class="conteudo">
+
+        <!-- Projeto principal -->
+        <section aria-labelledby="titulo-projeto">
+            <h2 id="titulo-projeto">Projeto</h2>
+            <p class="secao-resumo">Jogo completo, com várias páginas e níveis de dificuldade.</p>
+
+            <article class="cartao destaque">
+                <img src="imagens/capturas/mata-mosquito.jpg" width="800" height="500"
+                     alt="Tela do jogo Mata Mosquito: um mosquito voando sobre uma paisagem, com os corações de vida e o cronômetro no canto">
+                <div class="cartao-texto">
+                    <h3>Mata Mosquito</h3>
+                    <p>
+                        Clique nos mosquitos antes que eles sumam. Cada mosquito que escapa custa uma vida;
+                        resista até o fim do cronômetro para vencer. Há três níveis de dificuldade: Normal, Difícil e Chuck Norris.
+                    </p>
+                    <ul class="etiquetas pequenas">
+                        <li>setInterval</li>
+                        <li>Math.random</li>
+                        <li>DOM</li>
+                        <li>window.location</li>
+                        <li>Bootstrap 4</li>
+                    </ul>
+                    <div class="acoes">
+                        <a class="botao" href="material%20did%C3%A1tico/Udemy/Desenvolvimento%20Web%20Completo%202022/PROJETOS/01-mata-mosca/index.html">Jogar</a>
+                        <a class="botao secundario" href="https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/Udemy/Desenvolvimento%20Web%20Completo%202022/PROJETOS/01-mata-mosca" target="_blank" rel="noopener">Código</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Exercícios -->
+        <section aria-labelledby="titulo-exercicios">
+            <h2 id="titulo-exercicios">Exercícios</h2>
+            <p class="secao-resumo">Exercícios do Curso em Vídeo, cada um com HTML, CSS e JavaScript em arquivos separados.</p>
+
+            <div class="grade">
+                <article class="cartao">
+                    <img src="imagens/capturas/hora-do-dia.jpg" width="800" height="500" loading="lazy"
+                         alt="Exercício Hora do dia mostrando 'Agora são 20 horas. Boa Noite!' com a foto de uma rua à noite">
+                    <div class="cartao-texto">
+                        <h3>Hora do dia</h3>
+                        <p>Mostra a hora atual com uma saudação, uma foto e uma cor de fundo de acordo com o período do dia.</p>
+                        <ul class="etiquetas pequenas">
+                            <li>Date</li>
+                            <li>if/else</li>
+                            <li>style</li>
+                        </ul>
+                        <div class="acoes">
+                            <a class="botao" href="material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/EXERC%C3%8DCIOS/01-horas/index.html">Abrir</a>
+                            <a class="botao secundario" href="https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/EXERC%C3%8DCIOS/01-horas" target="_blank" rel="noopener">Código</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cartao">
+                    <img src="imagens/capturas/verificador-de-idade.jpg" width="800" height="500" loading="lazy"
+                         alt="Exercício Verificador de idade mostrando 'Detectamos mulher de 31 anos!' com uma foto">
+                    <div class="cartao-texto">
+                        <h3>Verificador de idade</h3>
+                        <p>Calcula a idade pelo ano de nascimento e mostra uma foto da faixa etária, de bebê a idoso.</p>
+                        <ul class="etiquetas pequenas">
+                            <li>validação</li>
+                            <li>if/else</li>
+                            <li>createElement</li>
+                        </ul>
+                        <div class="acoes">
+                            <a class="botao" href="material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/EXERC%C3%8DCIOS/02-idade/index.html">Abrir</a>
+                            <a class="botao secundario" href="https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/EXERC%C3%8DCIOS/02-idade" target="_blank" rel="noopener">Código</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cartao">
+                    <img src="imagens/capturas/contador.jpg" width="800" height="500" loading="lazy"
+                         alt="Exercício Contador fazendo uma contagem regressiva de 20 até 0, de 2 em 2">
+                    <div class="cartao-texto">
+                        <h3>Contador</h3>
+                        <p>Conta de um número até outro, em ordem crescente ou regressiva, com o passo escolhido.</p>
+                        <ul class="etiquetas pequenas">
+                            <li>for</li>
+                            <li>validação</li>
+                            <li>template strings</li>
+                        </ul>
+                        <div class="acoes">
+                            <a class="botao" href="material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/EXERC%C3%8DCIOS/03-contador/index.html">Abrir</a>
+                            <a class="botao secundario" href="https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/EXERC%C3%8DCIOS/03-contador" target="_blank" rel="noopener">Código</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cartao">
+                    <img src="imagens/capturas/tabuada.jpg" width="800" height="500" loading="lazy"
+                         alt="Exercício Tabuada mostrando a tabuada do 7">
+                    <div class="cartao-texto">
+                        <h3>Tabuada</h3>
+                        <p>Gera a tabuada de 0 a 10 do número digitado, montando a lista de resultados pelo DOM.</p>
+                        <ul class="etiquetas pequenas">
+                            <li>for</li>
+                            <li>createElement</li>
+                            <li>appendChild</li>
+                        </ul>
+                        <div class="acoes">
+                            <a class="botao" href="material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/EXERC%C3%8DCIOS/04-tabuada/index.html">Abrir</a>
+                            <a class="botao secundario" href="https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/EXERC%C3%8DCIOS/04-tabuada" target="_blank" rel="noopener">Código</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cartao">
+                    <img src="imagens/capturas/analisador-de-numeros.jpg" width="800" height="500" loading="lazy"
+                         alt="Exercício Analisador de números com cinco valores adicionados e o resumo com maior, menor, soma e média">
+                    <div class="cartao-texto">
+                        <h3>Analisador de números</h3>
+                        <p>Guarda números de 1 a 100 sem repetição e mostra quantidade, maior, menor, soma e média.</p>
+                        <ul class="etiquetas pequenas">
+                            <li>arrays</li>
+                            <li>funções</li>
+                            <li>for...in</li>
+                        </ul>
+                        <div class="acoes">
+                            <a class="botao" href="material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/EXERC%C3%8DCIOS/05-funcao%2Barray/index.html">Abrir</a>
+                            <a class="botao secundario" href="https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/EXERC%C3%8DCIOS/05-funcao%2Barray" target="_blank" rel="noopener">Código</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Exemplos das aulas -->
+        <section aria-labelledby="titulo-exemplos">
+            <h2 id="titulo-exemplos">Exemplos por tópico</h2>
+            <p class="secao-resumo">
+                Páginas curtas feitas durante as aulas para praticar cada assunto.
+                Alguns exemplos pedem dados por caixas de diálogo (<code>prompt</code> e <code>alert</code>) assim que abrem.
+            </p>
+
+            <div class="colunas">
+                <div>
+                    <h3>Curso em Vídeo</h3>
+                    <ul class="lista-links">
+                        <li><a href="material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/01-variaveis/variaveis.html">Variáveis</a></li>
+                        <li><a href="material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/02-operadores/operadores.html">Operadores</a></li>
+                        <li><a href="material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/03-botao/index.html">Botão</a></li>
+                        <li><a href="material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/04-DOM/index.html">DOM</a></li>
+                        <li><a href="material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/05-eventos/index.html">Eventos na DOM</a></li>
+                        <li><a href="material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/05-eventos/lampada.html">Lâmpada (eventos do mouse)</a></li>
+                        <li><a href="material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/05-eventos/menu(click).html">Menu com listas</a></li>
+                        <li><a href="material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/05-eventos/somar.html">Somando valores</a></li>
+                        <li><a href="material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/06-condi%C3%A7%C3%B5es/if.html">Condição if/else</a></li>
+                        <li><a href="material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/06-condi%C3%A7%C3%B5es/switch.html">Condição switch</a></li>
+                        <li><a href="material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/08-variaveis_compostas(array)/01-array/index.html">Arrays</a></li>
+                        <li><a href="material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/09-funcoes/index.html">Funções</a></li>
+                        <li><a href="material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/10-objeto/index.html">Objetos</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Udemy · Desenvolvedor Web Completo</h3>
+                    <ul class="lista-links">
+                        <li><a href="material%20did%C3%A1tico/Udemy/Desenvolvedor%20web%20completo/01-math/index.html">Objeto Math</a></li>
+                        <li><a href="material%20did%C3%A1tico/Udemy/Desenvolvedor%20web%20completo/02-string/index.html">Strings</a></li>
+                        <li><a href="material%20did%C3%A1tico/Udemy/Desenvolvedor%20web%20completo/03-date/index.html">Objeto Date</a></li>
+                        <li><a href="material%20did%C3%A1tico/Udemy/Desenvolvedor%20web%20completo/04-objeto/index.html">Objetos literais</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Udemy · Desenvolvimento Web Completo</h3>
+                    <ul class="lista-links">
+                        <li><a href="material%20did%C3%A1tico/Udemy/Desenvolvimento%20Web%20Completo%202022/01-funcoes/01-funcao_anonima/funcoes_anonimas.html">Funções anônimas</a></li>
+                        <li><a href="material%20did%C3%A1tico/Udemy/Desenvolvimento%20Web%20Completo%202022/01-funcoes/02-funcao_callback/funcoes_callback.html">Funções de callback</a></li>
+                        <li><a href="material%20did%C3%A1tico/Udemy/Desenvolvimento%20Web%20Completo%202022/01-funcoes/03-strings/funcoes_strings.html">Funções de string</a></li>
+                        <li><a href="material%20did%C3%A1tico/Udemy/Desenvolvimento%20Web%20Completo%202022/01-funcoes/04-data/funcoes_datas.html">Funções de data</a></li>
+                        <li><a href="material%20did%C3%A1tico/Udemy/Desenvolvimento%20Web%20Completo%202022/01-funcoes/05-parametros_variaveis/funcoes.html">Parâmetros variáveis</a></li>
+                        <li><a href="material%20did%C3%A1tico/Udemy/Desenvolvimento%20Web%20Completo%202022/02-eventos/01-eventos_teclado.html">Eventos de teclado</a></li>
+                        <li><a href="material%20did%C3%A1tico/Udemy/Desenvolvimento%20Web%20Completo%202022/02-eventos/02-eventos_janela.html">Eventos de janela</a></li>
+                        <li><a href="material%20did%C3%A1tico/Udemy/Desenvolvimento%20Web%20Completo%202022/02-eventos/03-eventos_formulario.html">Eventos de formulário</a></li>
+                        <li><a href="material%20did%C3%A1tico/Udemy/Desenvolvimento%20Web%20Completo%202022/03-DOM/manipulando_estilo.html">Estilos pelo DOM</a></li>
+                        <li><a href="material%20did%C3%A1tico/Udemy/Desenvolvimento%20Web%20Completo%202022/04-tratamento%20de%20erro/tratamento_erros.html">Tratamento de erros</a></li>
+                        <li><a href="material%20did%C3%A1tico/Udemy/Desenvolvimento%20Web%20Completo%202022/05-BOM/01-window.html">BOM: window</a></li>
+                        <li><a href="material%20did%C3%A1tico/Udemy/Desenvolvimento%20Web%20Completo%202022/05-BOM/02-screen.html">BOM: screen</a></li>
+                        <li><a href="material%20did%C3%A1tico/Udemy/Desenvolvimento%20Web%20Completo%202022/05-BOM/03-location.html">BOM: location</a></li>
+                        <li><a href="material%20did%C3%A1tico/Udemy/Desenvolvimento%20Web%20Completo%202022/05-BOM/04-timing.html">BOM: temporizadores</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="conteudo">
+            <p>
+                Cursos:
+                <a href="https://www.youtube.com/playlist?list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1" target="_blank" rel="noopener">JavaScript e ECMAScript para Iniciantes (Curso em Vídeo)</a> ·
+                <a href="https://www.udemy.com/course/curso-desenvolvedor-web-completo/" target="_blank" rel="noopener">Desenvolvedor Web Completo (Udemy)</a> ·
+                <a href="https://www.udemy.com/course/web-completo/" target="_blank" rel="noopener">Desenvolvimento Web Completo (Udemy)</a>
+            </p>
+            <p>&copy; Marcos</p>
+        </div>
+    </footer>
+
+</body>
+</html>

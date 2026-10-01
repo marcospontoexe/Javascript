@@ -5,7 +5,7 @@
     padding: 0px;       /* elimina o pad de todos os elementos*/
 }
 body{
-    background-color: white;
+    background-color: rgb(106, 106, 255);   /* fundo colorido para o título e o rodapé (em branco) aparecerem */
     font: normal 15pt Arial;
 }
 
