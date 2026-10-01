@@ -4,6 +4,8 @@ Repositório dos meus estudos de JavaScript no navegador (client-side). Aqui est
 
 **Tecnologias:** HTML5, CSS3, JavaScript (ES6+), DOM, BOM e Bootstrap 4.
 
+**Site com os projetos funcionando:** [marcospontoexe.github.io/Javascript](https://marcospontoexe.github.io/Javascript/)
+
 ## Cursos
 
 | Curso | Plataforma | Material neste repositório |
@@ -23,17 +25,17 @@ Jogo em que o jogador clica nos mosquitos que aparecem na tela antes que eles su
 - Três níveis de dificuldade (Normal, Difícil e Chuck Norris), que mudam o intervalo entre os mosquitos (1,5 s, 1 s e 0,75 s). O nível escolhido chega à página do jogo pela query string da URL.
 - Cada mosquito surge com posição, tamanho e direção aleatórios, dentro de uma área que acompanha o tamanho da janela.
 - Conceitos praticados: `setInterval`/`clearInterval`, `Math.random`, criação e remoção de elementos com o DOM, navegação entre páginas com `window.location` e layout com Bootstrap 4.
-- [Código-fonte](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/Udemy/Desenvolvimento%20Web%20Completo%202022/PROJETOS/01-mata-mosca). Para jogar, abra o `index.html`.
+- [Jogar online](https://marcospontoexe.github.io/Javascript/material%20did%C3%A1tico/Udemy/Desenvolvimento%20Web%20Completo%202022/PROJETOS/01-mata-mosca/index.html) · [Código-fonte](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/Udemy/Desenvolvimento%20Web%20Completo%202022/PROJETOS/01-mata-mosca)
 
 ### Exercícios (Curso em Vídeo)
 
-| Exercício | O que faz | Conceitos praticados |
-|-----------|-----------|----------------------|
-| [Hora do dia](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/EXERC%C3%8DCIOS/01-horas) | Lê a hora do sistema ao abrir a página e mostra "Bom dia", "Boa tarde" ou "Boa noite", com imagem e cor de fundo de acordo com o período. | `Date`, `if/else`, estilos alterados pelo DOM |
-| [Verificador de idade](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/EXERC%C3%8DCIOS/02-idade) | Calcula a idade a partir do ano de nascimento e mostra uma foto da faixa etária (bebê, criança, adolescente, jovem, adulto ou idoso) de acordo com o sexo escolhido. | Validação de entrada, `if/else` encadeado, criação de `<img>` pelo DOM |
-| [Contador](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/EXERC%C3%8DCIOS/03-contador) | Conta de um número inicial até um final, com o passo informado pelo usuário. | Laço `for`, validação de entrada, emojis com `\u{...}` |
-| [Tabuada](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/EXERC%C3%8DCIOS/04-tabuada) | Gera a tabuada de 0 a 10 do número digitado dentro de uma lista. | Laço `for`, `createElement` e `appendChild` |
-| [Analisador de números](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/EXERC%C3%8DCIOS/05-funcao%2Barray) | Guarda números de 1 a 100 sem repetição e, ao concluir, mostra quantidade, maior, menor, soma e média. | Arrays (`push`, `indexOf`), funções, laço `for...in` |
+| Exercício | O que faz | Conceitos praticados | Online |
+|-----------|-----------|----------------------|--------|
+| [Hora do dia](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/EXERC%C3%8DCIOS/01-horas) | Lê a hora do sistema ao abrir a página e mostra "Bom dia", "Boa tarde" ou "Boa noite", com imagem e cor de fundo de acordo com o período. | `Date`, `if/else`, estilos alterados pelo DOM | [abrir](https://marcospontoexe.github.io/Javascript/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/EXERC%C3%8DCIOS/01-horas/index.html) |
+| [Verificador de idade](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/EXERC%C3%8DCIOS/02-idade) | Calcula a idade a partir do ano de nascimento e mostra uma foto da faixa etária (bebê, criança, adolescente, jovem, adulto ou idoso) de acordo com o sexo escolhido. | Validação de entrada, `if/else` encadeado, criação de `<img>` pelo DOM | [abrir](https://marcospontoexe.github.io/Javascript/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/EXERC%C3%8DCIOS/02-idade/index.html) |
+| [Contador](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/EXERC%C3%8DCIOS/03-contador) | Conta de um número inicial até um final, em ordem crescente ou regressiva, com o passo informado pelo usuário. | Laço `for`, validação de entrada, emojis com `\u{...}` | [abrir](https://marcospontoexe.github.io/Javascript/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/EXERC%C3%8DCIOS/03-contador/index.html) |
+| [Tabuada](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/EXERC%C3%8DCIOS/04-tabuada) | Gera a tabuada de 0 a 10 do número digitado dentro de uma lista. | Laço `for`, `createElement` e `appendChild` | [abrir](https://marcospontoexe.github.io/Javascript/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/EXERC%C3%8DCIOS/04-tabuada/index.html) |
+| [Analisador de números](https://github.com/marcospontoexe/Javascript/tree/main/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/EXERC%C3%8DCIOS/05-funcao%2Barray) | Guarda números de 1 a 100 sem repetição e, ao concluir, mostra quantidade, maior, menor, soma e média. | Arrays (`push`, `indexOf`), funções, laço `for...in` | [abrir](https://marcospontoexe.github.io/Javascript/material%20did%C3%A1tico/curso%20em%20v%C3%ADdeo/EXERC%C3%8DCIOS/05-funcao%2Barray/index.html) |
 
 ### Exemplos por tópico
 
@@ -43,7 +45,7 @@ Jogo em que o jogador clica nos mosquitos que aparecem na tela antes que eles su
 
 ## Como executar
 
-Não há dependências nem etapa de build. Clone o repositório e abra no navegador o arquivo `.html` do exemplo ou projeto.
+Não há dependências nem etapa de build. Use o [site](https://marcospontoexe.github.io/Javascript/), ou clone o repositório e abra no navegador o arquivo `.html` do exemplo ou projeto.
 
 ---
 

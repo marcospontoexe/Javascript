@@ -1,44 +1,48 @@
 # CONTEXTO DA SESSÃO
 
-- **Última atualização:** 2026-09-30 20:36
+- **Última atualização:** 2026-09-30 20:54
 - **Sessão nº:** 2
 - **Status geral:** pronto para revisão
 
 ## 1. Objetivo da tarefa
-Organizar o repositório de estudos de JavaScript para servir de vitrine: README com cursos, projetos e exercícios, preparando o material para entrar num portfólio futuro.
+Organizar o repositório de estudos de JavaScript para servir de vitrine e publicá-lo no GitHub Pages, para que os projetos entrem num portfólio futuro.
 
 ## 2. Já feito ✅
 - Sessão 1: criado [CLAUDE.md](CLAUDE.md) (estrutura, convenções e regra de handoff).
-- Sessão 2: [README.md](README.md) ganhou as seções "Cursos", "Projetos" (Mata Mosquito), "Exercícios", "Exemplos por tópico" e "Como executar"; o texto antigo virou a seção "Apostila de JavaScript".
-- Sessão 2: corrigidos no README a tabela de comparação (`===` e `!=`), a imagem da Figura 8 (`10.jpeg`) e dois erros de digitação.
-- Sessão 2: [CLAUDE.md](CLAUDE.md) atualizado com o curso de cada pasta e a regra de manter o README como vitrine.
+- [README.md](README.md): seções "Cursos", "Projetos", "Exercícios", "Exemplos por tópico" e "Como executar", com links para o site; o texto antigo virou "Apostila de JavaScript" (com a tabela de comparação, a Figura 8 e erros de digitação corrigidos).
+- Bug do Contador corrigido em [03-contador/script.js](<material didático/curso em vídeo/EXERCÍCIOS/03-contador/script.js>): a contagem regressiva usava `c <= fim`, agora usa `c >= fim` (testado: conta de 20 a 0).
+- GitHub Pages preparado: página inicial [index.html](index.html) na raiz (projeto, 5 exercícios e 31 exemplos por tópico, com tema claro e escuro e layout para celular), [.nojekyll](.nojekyll) e 6 capturas em [imagens/capturas/](imagens/capturas/). Os 43 links relativos foram verificados com maiúsculas/minúsculas exatas.
+- Ajustes visíveis no site: fundo azul no [Verificador de idade](<material didático/curso em vídeo/EXERCÍCIOS/02-idade/style.css>) (título e rodapé brancos estavam invisíveis), `<h1>` do exercício 05 ("Analisando números com funções") e `<title>` nas 4 páginas do Mata Mosquito.
+- [CLAUDE.md](CLAUDE.md): curso de cada pasta e seção "GitHub Pages (portfólio)".
 
 ## 3. Em andamento 🔧
 - nenhum
 
 ## 4. Próximos passos (planejado) 📋
-1. Corrigir a contagem regressiva do [Contador](<material didático/curso em vídeo/EXERCÍCIOS/03-contador/script.js>): no laço decrescente (linha 26) a condição `c <= fim` deveria ser `c >= fim`; hoje, com início maior que o fim, nada é contado.
-2. Portfólio: ativar o GitHub Pages para ter links de demonstração ao vivo dos projetos e acrescentá-los ao README.
-3. Portfólio: tirar capturas de tela do Mata Mosquito e dos exercícios para o README.
-4. Opcional: dar `<title>` às páginas do Mata Mosquito (hoje estão vazios) e corrigir o `<h1>` do exercício 05 ("Analisando a String" → é uma análise de números).
+1. Utilizador: fazer o commit e o push, e ativar o Pages em Settings → Pages → Source: "Deploy from a branch" → Branch `main`, pasta `/ (root)`.
+2. Depois do deploy, abrir https://marcospontoexe.github.io/Javascript/ e testar o Mata Mosquito e os exercícios no site.
+3. Incluir o link do site no portfólio.
 
 ## 5. Decisões e raciocínio 🧠
-- Os links do README continuam como URLs absolutas do GitHub com percent-encoding, como no restante do arquivo.
-- A pasta `Udemy/Desenvolvedor web completo` foi associada a `udemy.com/course/curso-desenvolvedor-web-completo` e `Udemy/Desenvolvimento Web Completo 2022` a `udemy.com/course/web-completo` (o utilizador passou os dois links no item 3; suposição a confirmar).
-- Os links da Udemy ficaram sem o parâmetro `?couponCode=...`, porque cupons expiram; o link do YouTube usa o formato de playlist.
-- O bug do Contador não foi corrigido, porque o pedido era só atualizar o README.
+- Pages publicado direto da branch `main` (raiz), sem GitHub Actions: o site é estático e não tem build.
+- `.nojekyll` para evitar que o Jekyll processe o README e os `.md` (mais rápido, sem surpresas com Liquid).
+- Links do `index.html` relativos (funcionam localmente e no Pages); os do README continuam absolutos, conforme a convenção do arquivo.
+- Capturas geradas com Chrome headless a partir de cópias no scratchpad com os campos preenchidos; os arquivos dos exercícios não foram alterados para isso.
+- A pasta `Udemy/Desenvolvedor web completo` foi associada a `udemy.com/course/curso-desenvolvedor-web-completo` e `Udemy/Desenvolvimento Web Completo 2022` a `udemy.com/course/web-completo` (suposição a confirmar). Links sem `?couponCode=...`.
 
 ## 6. Estado do projeto / ambiente
-- Branch `main`. [README.md](README.md), [CLAUDE.md](CLAUDE.md) e este arquivo estão alterados e sem commit.
-- Commits: o utilizador faz os commits sozinho; o agente só sugere o título do commit, em inglês. O `git` não está no PATH do PowerShell.
+- Branch `main`, tudo sem commit. Os commits são feitos pelo utilizador; o agente só sugere o título do commit em inglês. O `git` não está no PATH do PowerShell.
+- Chrome em `C:\Program Files\Google\Chrome\Application\chrome.exe` (usado para as capturas e para testar o layout).
 - Sem dependências: HTML/CSS/JS estático (Bootstrap 4 via CDN no Mata Mosquito).
 
 ## 7. Bloqueios e pendências ⚠️
 - Confirmar com o utilizador a associação entre pastas e cursos da Udemy (ver seção 5).
+- A captura "Hora do dia" mostra "20 horas. Boa Noite!" (hora em que foi tirada); é só ilustrativa.
 
 ## 8. Comandos úteis
-- Abrir um exemplo: `Start-Process "material didático\curso em vídeo\EXERCÍCIOS\04-tabuada\index.html"`
+- Abrir o site localmente: `Start-Process "index.html"`
 - Abrir o jogo: `Start-Process "material didático\Udemy\Desenvolvimento Web Completo 2022\PROJETOS\01-mata-mosca\index.html"`
+- Captura de tela: ver a seção "GitHub Pages (portfólio)" do [CLAUDE.md](CLAUDE.md).
 
 ## 9. Como retomar
-Leia este arquivo e confirme com o utilizador a pendência da seção 7; depois siga a seção 4 a partir do passo 1. Os projetos que vão para o portfólio são os deste repositório (Javascript).
+Leia este arquivo e pergunte ao utilizador se o Pages já foi ativado (seção 4, passo 1); depois continue a partir do passo 2.
